@@ -1,0 +1,36 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+.menu {
+  position: sticky;
+  @include gradient;
+}
+
+.navbar-nav {
+  li {
+    padding: 0 0.7rem;
+    @include media-breakpoint-down(lg) {
+      padding: 0;
+    }
+    a {
+      text-transform: capitalize;
+      font-weight: 600;
+
+      &:hover {
+        color: $black !important ;
+        background-color: #fff;
+      }
+    }
+  }
+}
+.nav-icons {
+  i {
+    padding: 0 0.7rem;
+    color: $white;
+    &:hover {
+      color: $primary;
+    }
+    @include media-breakpoint-down(lg) {
+      display: no;
+    }
+  }
+}
