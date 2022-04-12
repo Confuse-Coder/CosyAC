@@ -1,0 +1,32 @@
+@use '../custom' as *;
+
+.slider {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+
+.slider-content {
+  position: absolute;
+  top: 4rem;
+}
+
+.breadcrumb {
+  font-weight: 600;
+  padding-left: 20px;
+
+  a {
+    padding-right: 15px;
+    color: $gray-600;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  i {
+    padding-right: 15px;
+  }
+}
