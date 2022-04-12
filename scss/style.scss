@@ -1,0 +1,18 @@
+@use 'custom';
+
+// IMPORT THE COMPONENTS
+
+@use 'components/animation';
+@use 'components/button';
+@use 'components/mixin';
+@use 'components/typography';
+
+// IMPORT THE SECTIONS
+
+@use 'sections/cta';
+@use 'sections/detail';
+@use 'sections/filter';
+@use 'sections/header';
+@use 'sections/productList';
+@use 'sections/slider';
+@use 'sections/footer';
