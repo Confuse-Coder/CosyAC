@@ -11210,6 +11210,14 @@ textarea.form-control-lg {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.display-3--title-1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  color: #000;
+}
 .display-3--sub-title {
   margin-top: 1rem;
   font-size: 1.2rem;
@@ -11218,6 +11226,12 @@ textarea.form-control-lg {
   .display-3--sub-title {
     font-size: 0.8rem;
   }
+}
+.display-3--description {
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 1.2rem;
+  text-transform: none;
 }
 
 .heading-line::before {
@@ -11287,6 +11301,28 @@ iframe {
 .cta-info__list li:nth-child(3):before {
   font: var(--fa-font-solid);
   content: "\f2b6";
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.cta-info-1 {
+  padding: 3rem;
+  margin: 1rem 0;
+}
+.cta-info-1__list {
+  position: relative;
+  list-style-type: none;
+  display: block;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+.cta-info-1__list li {
+  padding-left: 0;
+}
+.cta-info-1__list li:before {
+  font: var(--fa-font-solid);
+  content: "\f00c";
   margin-right: 0.5rem;
   font-size: 1.2rem;
   margin-bottom: 0.7rem;
@@ -11436,6 +11472,82 @@ iframe {
 .ratings i {
   color: rgba(0, 213, 255, 0.7);
   font-size: 1rem;
+}
+
+.xzoom_container {
+  margin: 0px 10px;
+}
+
+.xzoom-thumbs {
+  margin: 10px 0;
+}
+
+.xzoom {
+  height: 460px;
+  width: 100%;
+  box-shadow: 1px 4px 8px #aaa;
+}
+
+.xzoom-gallery {
+  border: 1px solid #aaa;
+}
+
+.xzoom-gallery:hover {
+  border: 1px solid #378bbf;
+}
+
+.xzoom-lens {
+  cursor: zoom-in;
+}
+
+.xzoom_details h4 {
+  color: #5d4428;
+  padding-bottom: 10px;
+}
+.xzoom_details h3 {
+  color: #1f658b;
+}
+.xzoom_details h3 span {
+  color: #555;
+  font-weight: 300;
+  font-size: 25px;
+  text-decoration: line-through;
+}
+.xzoom_details p i {
+  color: #d33f3f;
+}
+.xzoom_details h6 {
+  font-weight: 400;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  line-height: 1.6;
+}
+.xzoom_details label {
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #1f2531;
+}
+.xzoom_details .form-control {
+  width: 25%;
+  height: 35px;
+  padding: 3px 10px;
+  border: 0.5px solid #aaa;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.xzoom_details .btn {
+  padding: 4px 10px;
+  background: #483b29;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+.xzoom_details .btn:hover {
+  background: #1c5776;
 }
 
 .menu {
