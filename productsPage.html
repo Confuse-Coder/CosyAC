@@ -1,3 +1,4 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,47 +12,51 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <script src="/assets/js/main.js"></script>
+
 </head>
 
 <body>
 
     <!-- START THE NAVBAR SECTION -->
-    <nav class="navbar navbar-expand-lg navbar-light menu shadow">
-        <div class="container">
-            <a class="navbar-brand pt-0" href="#">
-                <img src="/img/COSY.svg" alt="logo image">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" aria-current="page" href="/index.html">home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" href="/productsPage.html">products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" href="/aboutUs.html">about us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" href="/cta.html">contact us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" href="/blogPage.html">blogs</a>
-                    </li>
+    <section id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light menu shadow">
+            <div class="container">
+                <a class="navbar-brand pt-0" href="#">
+                    <img src="/img/COSY.svg" alt="logo image">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link rounded-pill" aria-current="page" href="/index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="/productsPage.html">products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="/aboutUs.html">about us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="/cta.html">contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="/blogPage.html">blogs</a>
+                        </li>
 
-                </ul>
-                <span class="nav-icons">
-                    <i class="fas fa-magnifying-glass"></i>
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-bag-shopping"></i>
-                </span>
+                    </ul>
+                    <span class="nav-icons">
+                        <i class="fas fa-magnifying-glass"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-bag-shopping"></i>
+                    </span>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </section>
 
     <!-- START PRODUCTS CONTENT -->
     <section id="products">
@@ -64,240 +69,227 @@
                     <a href="/productsPage.html">All Products</a>
                 </div>
             </div>
+            <div class="row mb-5">
+                <nav>
+                    <div class="nav nav-tabs justify-content-end" id="nav-tab" role="tablist">
+                        <button class="list nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true" data-filter="all">All</button>
+                        <button class="list nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                            aria-selected="false" data-filter="lg">LG</button>
+                        <button class="list nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                            aria-selected="false" data-filter="samsung">SamSung</button>
+                        <button class="list nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                            aria-selected="false" data-filter="reetech">Reetech</button>
+                    </div>
+                </nav>
+            </div>
 
             <div class="row">
-                <!-- START FILTER ZONE -->
-                <!-- START COL-1 -->
-                <div class="col-md-3">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Brands
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <button class="list btn btn-outline-primary d-block mb-1 active" data-filter="all"
-                                        type="button">All</button>
-                                    <button class="list btn btn-outline-primary d-block mb-1" data-filter="lg"
-                                        type="button">LG</button>
-                                    <button class="list btn btn-outline-primary d-block mb-1" data-filter="samsung"
-                                        type="button">SamSung</button>
-                                    <button class="list btn btn-outline-primary d-block mb-1" data-filter="reetech"
-                                        type="button">Reetech</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Review Rating
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="ratings">
-                                        <input type="checkbox">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="ratings">
-                                        <input type="checkbox">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="ratings">
-                                        <input type="checkbox">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-
-                                    <div class="ratings">
-                                        <input type="checkbox">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="ratings">
-                                        <input type="checkbox">
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- START ALL PRODUCTS ZONE -->
 
-                <!-- START COL-2 -->
-                <div class="col-md-3">
-                    <div class="portfolio-box shadow samsung">
-                        <img src="/img/Samsung/ss-1-1.webp" alt="Samsung 1 image" title="Samsung 1 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-2.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+                <!-- COL - 1 -->
+                <div class="col-md-3 p-2">
+                    <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
+                        data-id="LG11" data-title="LG 1-1" data-size="4.9"" data-weight=" 130 g"
+                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        <img src="/img/LG/lg-1-1.webp" class="w-100 productImg">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
+                        <span class="fw-bold d-block">$ 45.50</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
-                    <div class="portfolio-box shadow reetech">
-                        <img src="/img/Reetech/rt-1-1.jpg" alt="Reetech 1 image" title="Reetech 1 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-3.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-box shadow lg">
-                        <img src="/img/LG/lg-1-1.webp" alt="LG 1 image" title="LG 1 picture" class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-1.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+                    <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
+                        data-id="Reetech12" data-title="Reetech 1-2" data-size="4.9"" data-weight=" 130 g"
+                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        <img src="/img/Samsung/ss-2-2.png" class="w-100 productImg">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
+                        <span class="fw-bold d-block">$ 45.50</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
 
-                <!-- START COL-3 -->
-                <div class="col-md-3">
-                    <div class="portfolio-box shadow samsung">
-                        <img src="/img/Samsung/ss-2-1.webp" alt="Samsung 2 image" title="Samsung 2 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-6.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+                <!-- COL - 2 -->
+                <div class="col-md-3 p-2">
+                    <div class="selectProduct product-box special-img position-relative overflow-hidden text-center reetech"
+                        data-id="LG21" data-title="LG 2-1" data-size="4.9"" data-weight=" 130 g"
+                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        <img src="/img/Samsung/ss-1-1.webp" class="w-100 productImg">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
+                        <span class="fw-bold d-block">$ 45.50</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
-                    <div class="portfolio-box shadow reetech">
-                        <img src="/img/Reetech/rt-2-1.jpg" alt="Reetech 2 image" title="Reetech 2 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-4.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-box shadow lg">
-                        <img src="/img/LG/lg-2-1.webp" alt="LG 2 image" title="LG 2 picture" class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-8.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+                    <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
+                        data-id="Reetech13" data-title="Reetech 1-3" data-size="4.9"" data-weight=" 130 g"
+                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        <img src="/img/LG/lg-2-1.webp" class="w-100 productImg">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
+                        <span class="fw-bold d-block">$ 45.50</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
 
-                <!-- START COL-4 -->
-                <div class="col-md-3">
-                    <div class="portfolio-box shadow samsung">
-                        <img src="/img/Samsung/ss-3-1.png" alt="Samsung 3 image" title="Samsung 3 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-5.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+                <!-- COL - 3 -->
+                <div class="col-md-3 p-2">
+                    <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
+                        data-id="Samsung14" data-title="Samsung 1-4" data-size="4.9"" data-weight=" 130 g"
+                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        <img src="/img/Samsung/ss-2-3.png" class="w-100 productImg">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
+                        <span class="fw-bold d-block">$ 45.50</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
-                    <div class="portfolio-box shadow reetech">
-                        <img src="/img/Reetech/rt-4-1.jpg" alt="Reetech 3 image" title="Reetech 3 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-9.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-box shadow lg">
-                        <img src="/img/LG/lg-3-1.jpg" alt="LG 3 image" title="LG 3 picture" class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-7.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+                    <div class="selectProduct product-box special-img position-relative overflow-hidden text-center reetech"
+                        data-id="Samsung11" data-title="Samsung 1-1" data-size="4.9"" data-weight=" 130 g"
+                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        <img src="/img/Samsung/ss-2-1.webp" class="w-100 productImg">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
+                        <span class="fw-bold d-block">$ 45.50</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
-                <!-- END ALL PRODUCTS ZONE -->
+
+                <!-- COL - 4 -->
+                <div class="col-md-3 p-2">
+                    <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
+                        data-id="LG31" data-title="LG 3-1" data-size="4.9"" data-weight=" 130 g"
+                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        <img src="/img/LG/lg-3-1.jpg" class="w-100 productImg">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
+                        <span class="fw-bold d-block">$ 45.50</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
+                    </div>
+                    <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
+                        data-id="Samsung21" data-title="Samsung 2-1" data-size="4.9"" data-weight=" 130 g"
+                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        <img src="/img/Samsung/ss-2-4.webp" class="w-100 productImg">
+                        <span
+                            class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
+                        <span class="fw-bold d-block">$ 45.50</span>
+                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- END ALL PRODUCTS ZONE -->
+
+            <!--START PREVIEW COMPARE-->
+            <div class="w3-container w3-center">
+                <div class="w3-row w3-card-4 w3-grey w3-round-large w3-border comparePanle w3-margin-top">
+
+                    <!-- HEADER OF PREVIEW INCLUDE <H4> & BUTTON -->
+                    <div class="w3-row">
+                        <div class="w3-col l9 m8 s6 w3-margin-top">
+                            <h4>Added for comparison</h4>
+                        </div>
+                        <div class="w3-col l3 m4 s6 w3-margin-top">
+                             
+                            <button class="w3-btn w3-round-small w3-white w3-border notActive cmprBtn"
+                                disabled>Compare</button>
+                        </div>
+                    </div>
+
+                    <!-- USE JS TO ADD CONTENT WANNA COMPARE -->
+                    <div class=" titleMargin w3-container comparePan">
+                    </div>
+                </div>
+            </div>
+            <!--END PREVIEW COMPARE-->
+
+            <!-- COMPARISION POP-UP-->
+            <div id="id01" class="w3-animate-zoom w3-white w3-modal modPos">
+                <div class="w3-container">
+                    <a onclick="document.getElementById('id01').style.display='none'"
+                        class="whiteFont w3-padding w3-closebtn closeBtn">×</a>
+                </div>
+                <div class="w3-row contentPop w3-margin-top">
+                </div>
+
+            </div>
+            <!-- END COMPARISION POP-UP-->
+
+            <!--  WARNING POP-UP  -->
+
+            <div id="WarningModal" class="w3-modal">
+                <div class="w3-modal-content warningModal">
+                    <header class="w3-container w3-teal">
+                        <h3><span>⚠</span>Error</h3>
+                    </header>
+                    <div class="w3-container">
+                        <h4>Maximum of Three products are allowed for comparision</h4>
+
+                    </div>
+                    <footer class="w3-container w3-right-align">
+                        <button id="warningModalClose" onclick="document.getElementById('id01').style.display='none'"
+                            class="w3-btn w3-hexagonBlue w3-margin-bottom  ">Ok</button>
+                    </footer>
+                </div>
+            </div>
+            <!--  END WARNING POP-UP  -->
         </div>
     </section>
     <!-- END PRODUCTS CONTENT -->
 
+    <!-- newsletter -->
+    <section id="newsletter" class="py-5">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="title text-center pt-3 pb-5">
+                    <h2 class="position-relative d-inline-block ms-4">Newsletter Subscription</h2>
+                </div>
+
+                <p class="text-center text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus rem
+                    officia accusantium maiores quisquam dolorum?</p>
+                <div class="input-group mb-3 mt-3">
+                    <input type="text" class="form-control" placeholder="Enter Your Email ...">
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of newsletter -->
 
     <!-- START THE FOOTER -->
     <footer>
@@ -448,24 +440,22 @@
     </div>
 
     <!-- START BACK TO TOP BUTTON -->
-    <a href="#" class="shadow btn-secondary rounded-circle back-to-top">
+    <a href="#nav" class="shadow btn-secondary rounded-circle back-to-top">
         <i class="fas fa-chevron-up"></i>
     </a>
     <!-- END THE FOOTER -->
 
     <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('.list').click(function () {
                 const value = $(this).attr('data-filter');
                 if (value == 'all') {
-                    $('.portfolio-box').show('1000');
+                    $('.product-box').show('1000');
                 }
                 else {
-                    $('.portfolio-box').not('.' + value).hide('1000');
-                    $('.portfolio-box').filter('.' + value).show('1000');
+                    $('.product-box').not('.' + value).hide('1000');
+                    $('.product-box').filter('.' + value).show('1000');
                 }
             })
 

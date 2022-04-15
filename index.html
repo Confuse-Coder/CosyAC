@@ -11,47 +11,51 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <script src="/assets/js/main.js"></script>
 </head>
 
 <body>
 
     <!-- START THE NAVBAR SECTION -->
-    <nav class="navbar navbar-expand-lg navbar-light menu shadow fixed-top">
-        <div class="container">
-            <a class="navbar-brand pt-0" href="#">
-                <img src="/img/COSY.svg" alt="logo image">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" aria-current="page" href="/index.html">home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" href="/productsPage.html">products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" href="/aboutUs.html">about us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" href="/cta.html">contact us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link rounded-pill" href="/blogPage.html">blogs</a>
-                    </li>
+    <section id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light menu shadow fixed-top">
+            <div class="container">
+                <a class="navbar-brand pt-0" href="#">
+                    <img src="/img/COSY.svg" alt="logo image">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" aria-current="page" href="/index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="/productsPage.html">products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="/aboutUs.html">about us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="/cta.html">contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="/blogPage.html">blogs</a>
+                        </li>
 
-                </ul>
-                <span class="nav-icons">
-                    <i class="fas fa-magnifying-glass"></i>
-                    <i class="fas fa-heart"></i>
-                    <i class="fas fa-bag-shopping"></i>
-                </span>
+                    </ul>
+                    <span class="nav-icons">
+                        <i class="fas fa-magnifying-glass"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-bag-shopping"></i>
+                    </span>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+
+    </section>
 
     <!-- START INTRO SLIDER SECTION -->
     <section id="home">
@@ -201,7 +205,7 @@
 
     <!-- START BEST SELLER SECTION -->
     <section id="bestSeller">
-        <div class="container">
+        <div class="container mb-5">
             <div class="row">
                 <div class="display-3 text-center">
                     <h1 class="display-3--title fw-bold">Cools Faster, Farther and Wider</h1>
@@ -219,155 +223,156 @@
                     <button class="list btn btn-outline-primary" data-filter="reetech" type="button">Reetech</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="portfolio-box shadow lg">
-                        <img src="/img/LG/lg-1-1.webp" alt="portfolio 1 image" title="portfolio 1 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-3.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+            <div class="collection-list mt-4 row gx-0 gy-3">
+                <div class="product-box col-md-6 col-lg-4 col-xl-3 p-2 lg">
+                    <div class="collection-img position-relative">
+                        <img src="/img/LG/lg-1-1.webp" class="img-fluid">
+                        <span
+                            class="position-absolute bg-secondary text-white d-flex align-items-center justify-content-center">sale</span>
                     </div>
-                    <div class="portfolio-box shadow samsung">
-                        <img src="/img/Samsung/ss-3-5.webp" alt="portfolio 2 image" title="portfolio 2 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-2.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
                         </div>
-                    </div>
-                    <div class="portfolio-box shadow reetech">
-                        <img src="/img/Reetech/rt-4-3.jpg" alt="portfolio 3 image" title="portfolio 3 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-1.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 45.50</span>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="portfolio-box shadow lg">
-                        <img src="/img/LG/lg-3-7.jpg" alt="portfolio 4 image" title="portfolio 4 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-6.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
 
-                                </a>
-                            </div>
-                        </div>
+                <div class="product-box col-md-6 col-lg-4 col-xl-3 p-2 samsung">
+                    <div class="collection-img position-relative">
+                        <img src="/img/Samsung/ss-2-2.png" class="img-fluid">
+                        <span
+                            class="position-absolute bg-secondary text-white d-flex align-items-center justify-content-center">sale</span>
                     </div>
-                    <div class="portfolio-box shadow samsung">
-                        <img src="/img/Samsung/ss-1-2.webp" alt="portfolio 5 image" title="portfolio 5 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-4.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
                         </div>
-                    </div>
-                    <div class="portfolio-box shadow reetech">
-                        <img src="/img/Reetech/rt-4-2.jpg" alt="portfolio 6 image" title="portfolio 6 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-8.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
-                        </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 45.50</span>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="portfolio-box shadow lg">
-                        <img src="/img/LG/lg-3-6.webp" alt="portfolio 7 image" title="portfolio 7 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-5.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
 
-                                </a>
-                            </div>
-                        </div>
+                <div class="product-box col-md-6 col-lg-4 col-xl-3 p-2 reetech">
+                    <div class="collection-img position-relative">
+                        <img src="/img/Samsung/ss-1-1.webp" class="img-fluid">
+                        <span
+                            class="position-absolute bg-secondary text-white d-flex align-items-center justify-content-center">sale</span>
                     </div>
-                    <div class="portfolio-box shadow samsung">
-                        <img src="/img/Samsung/ss-1-3.webp" alt="portfolio 8 image" title="portfolio 8 picture"
-                            class="img-fluid d-flex">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-9.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-
-                                </a>
-                            </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
                         </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 45.50</span>
                     </div>
-                    <div class="portfolio-box shadow reetech">
-                        <img src="/img/Reetech/rt-1-3.jpg" alt="portfolio 9 image" title="portfolio 9 picture"
-                            class="img-fluid">
-                        <div class="portfolio-info">
-                            <div class="caption">
-                                <a href="/productDetail-7.html">
-                                    <button type="button" class="rounded-pill btn-rounded">show now
-                                        <span>
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
+                </div>
 
-                                </a>
-                            </div>
+                <div class="product-box col-md-6 col-lg-4 col-xl-3 p-2 lg">
+                    <div class="collection-img position-relative">
+                        <img src="/img/LG/lg-2-1.webp" class="img-fluid">
+                        <span
+                            class="position-absolute bg-secondary text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
                         </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 45.50</span>
+                    </div>
+                </div>
+
+                <div class="product-box col-md-6 col-lg-4 col-xl-3 p-2 samsung">
+                    <div class="collection-img position-relative">
+                        <img src="/img/Samsung/ss-2-3.png" class="img-fluid">
+                        <span
+                            class="position-absolute bg-secondary text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 45.50</span>
+                    </div>
+                </div>
+
+                <div class="product-box col-md-6 col-lg-4 col-xl-3 p-2 reetech">
+                    <div class="collection-img position-relative">
+                        <img src="/img/Samsung/ss-2-1.webp" class="img-fluid">
+                        <span
+                            class="position-absolute bg-secondary text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 45.50</span>
+                    </div>
+                </div>
+
+                <div class="product-box col-md-6 col-lg-4 col-xl-3 p-2 lg">
+                    <div class="collection-img position-relative">
+                        <img src="/img/LG/lg-3-1.jpg" class="img-fluid">
+                        <span
+                            class="position-absolute bg-secondary text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 45.50</span>
+                    </div>
+                </div>
+
+                <div class="product-box col-md-6 col-lg-4 col-xl-3 p-2 samsung">
+                    <div class="collection-img position-relative">
+                        <img src="/img/Samsung/ss-2-4.webp" class="img-fluid">
+                        <span
+                            class="position-absolute bg-secondary text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="rating mt-3">
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                            <span class="text-primary"><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-capitalize my-1">gray shirt</p>
+                        <span class="fw-bold">$ 45.50</span>
                     </div>
                 </div>
             </div>
@@ -547,7 +552,7 @@
     </div>
 
     <!-- START BACK TO TOP BUTTON -->
-    <a href="#" class="shadow btn-secondary rounded-circle back-to-top">
+    <a href="#nav" class="shadow btn-secondary rounded-circle back-to-top">
         <i class="fas fa-chevron-up"></i>
     </a>
     <!-- END THE FOOTER -->
@@ -560,11 +565,11 @@
             $('.list').click(function () {
                 const value = $(this).attr('data-filter');
                 if (value == 'all') {
-                    $('.portfolio-box').show('1000');
+                    $('.product-box').show('1000');
                 }
                 else {
-                    $('.portfolio-box').not('.' + value).hide('1000');
-                    $('.portfolio-box').filter('.' + value).show('1000');
+                    $('.product-box').not('.' + value).hide('1000');
+                    $('.product-box').filter('.' + value).show('1000');
                 }
             })
 

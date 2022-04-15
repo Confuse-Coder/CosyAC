@@ -7,18 +7,18 @@
   $(document).on('click', '.addToCompare', function () {
     // INVOKE FUNCTIONS
     $('.comparePanle').show();
-    $(this).toggleClass('rotateBtn');
     $(this).parents('.selectProduct').toggleClass('selected');
-    var productID = $(this).parents('.selectProduct').attr('data-title');
+    var productID = $(this).parents('.selectProduct').attr('data-id');
 
     var inArray = $.inArray(productID, list);
-    if (inArray < 0) {
+
+    if (inArray == -1) {
+      // inArray = -1 => Giá trị khởi tạo, trong Array chưa có phần tử nào
       if (list.length > 2) {
         $('#WarningModal').show();
         $('#warningModalClose').click(function () {
           $('#WarningModal').hide();
         });
-        $(this).toggleClass('rotateBtn');
         $(this).parents('.selectProduct').toggleClass('selected');
         return;
       }
@@ -26,14 +26,14 @@
       if (list.length < 3) {
         list.push(productID);
 
-        var displayTitle = $(this).parents('.selectProduct').attr('data-id');
+        var displayTitle = $(this).parents('.selectProduct').attr('data-title');
 
-        var image = $(this).siblings('.productImg').attr('src');
+        var image = $(this).parents().parents().find('.productImg').attr('src');
 
         $('.comparePan').append(
           '<div id="' +
             productID +
-            '" class="relPos titleMargin w3-margin-bottom   w3-col l3 m4 s4"><div class="w3-white titleMargin"><a class="selectedItemCloseBtn w3-closebtn cursor">&times</a><img src="' +
+            '" class="relPos titleMargin w3-margin-bottom w3-col l3 m4 s4"><div class="w3-white titleMargin"><a class="selectedItemCloseBtn w3-closebtn cursor">&times</a><img src="' +
             image +
             '" alt="image" style="height:100px;"/><p id="' +
             productID +
@@ -43,12 +43,14 @@
         );
       }
     } else {
-      list.splice($.inArray(productID, list), 1);
-      var prod = productID.replace(' ', '');
-      $('#' + prod).remove();
+      // inArray() tìm thấy phần tử trong list[]
+      list.splice($.inArray(productID, list), 1); //Remove phần tử cuổi cùng trong mảng list[]
+      $('#' + productID).remove();
       hideComparePanel();
     }
+
     if (list.length > 1) {
+      // Trong mảng từ 2 sản phẩm => show "Compare" button
       $('.cmprBtn').addClass('active');
       $('.cmprBtn').removeAttr('disabled');
     } else {
@@ -57,12 +59,12 @@
     }
   });
 
-  /*function to be executed when compare button is clicked*/
+  // Trigger .cmprBtn => "Compared" Button press
   $(document).on('click', '.cmprBtn', function () {
     if ($('.cmprBtn').hasClass('active')) {
-      /* this is to print the  features list statically*/
+      // Column I of Comparasion table
       $('.contentPop').append(
-        '<div class="w3-col s3 m3 l3 compareItemParent relPos">' +
+        '<div class="w3-col s3 m3 l3 relPos">' +
           '<ul class="product">' +
           '<li class=" relPos compHeader"><p class="w3-display-middle">Features</p></li>' +
           '<li>Title</li>' +
@@ -73,16 +75,18 @@
           '</div>'
       );
 
+      // Lặp những sản phảm đã được add vào List[] vào Column II và III...
       for (var i = 0; i < list.length; i++) {
-        /* this is to add the items to popup which are selected for comparision */
-        product = $('.selectProduct[data-title="' + list[i] + '"]');
-        var image = $('[data-title=' + list[i] + ']')
-          .find('.productImg')
+        // Hứng các giá trị cần có vào Column II & III
+        var product = $('.selectProduct[data-id="' + list[i] + '"]'); // product hứng sản phẩm đã được selected
+        var image = $('.selectProduct[data-id="' + list[i] + '"]')
+          .children('.productImg')
           .attr('src');
-        var title = $('[data-title=' + list[i] + ']').attr('data-id');
-        /*appending to div*/
+        var title = $('.selectProduct[data-id="' + list[i] + '"]').attr('data-title');
+
+        // Column II & III of Comparasion table
         $('.contentPop').append(
-          '<div class="w3-col s3 m3 l3 compareItemParent relPos">' +
+          '<div class="w3-col s3 m3 l3 relPos">' +
             '<ul class="product">' +
             '<li class="compHeader"><img src="' +
             image +
@@ -105,25 +109,26 @@
         );
       }
     }
-    $('.modPos').show();
+
+    $('.modPos').show(); // .modPos Comparision pop-up
   });
 
   /* function to close the comparision popup */
   $(document).on('click', '.closeBtn', function () {
-    $('.contentPop').empty();
-    $('.comparePan').empty();
-    $('.comparePanle').hide();
-    $('.modPos').hide();
-    $('.selectProduct').removeClass('selected');
-    $('.cmprBtn').attr('disabled', '');
+    // RESET SAU KHI CLICK CLOSE BUTTON
+    $('.contentPop').empty(); // Xoá Pop-up Comparision
+    $('.comparePan').empty(); // Xoá Pop-up Preview Content Selected Comparision
+    $('.comparePanle').hide(); // Ẩn Pop-up Preview (wrapper)
+    $('.modPos').hide(); // Ẩn Pop-up Comparision Table
+    $('.selectProduct').removeClass('selected'); // Bỏ class đã CSS thể hiện "active"
     list.length = 0;
-    $('.rotateBtn').toggleClass('rotateBtn');
   });
 
   /*function to remove item from preview panel*/
   $(document).on('click', '.selectedItemCloseBtn', function () {
-    var test = $(this).siblings('p').attr('id');
-    $('[data-title=' + test + ']')
+    // Nút X dùng xoá sản phẩm muốn so sánh
+    var test = $(this).siblings('p').attr('id'); //Hứng thẻ có ID cần xoá
+    $('[data-id=' + test + ']') // Từ attr tìm class của siblings thẻ chứa nó
       .find('.addToCompare')
       .click();
     hideComparePanel();
@@ -131,6 +136,7 @@
 
   function hideComparePanel() {
     if (!list.length) {
+      //Falsy value => Nếu trong list[] empty thì run...
       $('.comparePan').empty();
       $('.comparePanle').hide();
     }
