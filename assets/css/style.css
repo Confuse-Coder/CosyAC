@@ -11382,6 +11382,8 @@ iframe {
 
 .product-box {
   border: 0.1rem solid #adb5bd;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 .product-box img {
   width: 308px;
@@ -11569,42 +11571,6 @@ body {
   font-family: var(--sm-font);
 }
 
-/* navbar */
-.navbar {
-  -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand span {
-  letter-spacing: 2px;
-  font-family: var(--lg-font);
-}
-
-.nav-item {
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
-}
-.nav-item .nav-link:hover {
-  color: #00d5ff !important;
-}
-
-/* header */
-#header {
-  background: url(../images/banner-img-1.jpg) top/cover no-repeat;
-}
-
-.carousel-inner h1 {
-  font-size: 60px;
-  font-family: var(--lg-font);
-}
-
-.carousel-item .btn {
-  border-color: #fff !important;
-}
-
-.carousel-item .btn:hover {
-  border-color: var(--pink) !important;
-}
-
 /* title */
 .title h2::before {
   position: absolute;
@@ -11741,7 +11707,6 @@ footer a:hover {
   }
 }
 .menu {
-  position: sticky;
   background: linear-gradient(to right, rgba(0, 213, 255, 0.95), rgba(255, 0, 255, 0.95));
 }
 
@@ -11802,29 +11767,6 @@ html {
 
 body {
   margin: 0;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-audio,
-canvas,
-video {
-  display: inline-block;
-  vertical-align: baseline;
 }
 
 audio:not([controls]) {
@@ -12296,90 +12238,6 @@ ul.w3-ul li:last-child {
 .w3-fluid {
   max-width: 100%;
   height: auto;
-}
-
-.w3-tooltip .w3-text {
-  display: none;
-}
-
-.w3-tooltip:hover .w3-text {
-  display: inline-block;
-}
-
-.w3-navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.w3-navbar li {
-  float: left;
-}
-
-.w3-navbar li a {
-  display: block;
-  padding: 8px 16px;
-}
-
-.w3-navbar li a:hover {
-  color: #000;
-  background-color: #ccc;
-}
-
-.w3-navbar .w3-dropdown-hover,
-.w3-navbar .w3-dropdown-click {
-  position: static;
-}
-
-.w3-navbar .w3-dropdown-hover:hover,
-.w3-navbar .w3-dropdown-hover:first-child,
-.w3-navbar .w3-dropdown-click:hover {
-  background-color: #ccc;
-  color: #000;
-}
-
-.w3-navbar a,
-.w3-topnav a,
-.w3-sidenav a,
-.w3-dropdown-content a,
-.w3-accordion-content a,
-.w3-dropnav a {
-  text-decoration: none !important;
-}
-
-.w3-navbar .w3-opennav.w3-right {
-  float: right !important;
-}
-
-.w3-topnav {
-  padding: 8px 8px;
-}
-
-.w3-topnav a {
-  padding: 0 8px;
-  border-bottom: 3px solid transparent;
-  -webkit-transition: border-bottom 0.3s;
-  transition: border-bottom 0.3s;
-}
-
-.w3-topnav a:hover {
-  border-bottom: 3px solid #fff;
-}
-
-.w3-topnav .w3-dropdown-hover a {
-  border-bottom: 0;
-}
-
-.w3-opennav,
-.w3-closenav {
-  color: inherit;
-}
-
-.w3-opennav:hover,
-.w3-closenav:hover {
-  cursor: pointer;
-  opacity: 0.8;
 }
 
 .w3-btn,
@@ -14470,6 +14328,7 @@ a {
 }
 .slider {
   position: relative;
+  margin-top: 52.5px;
   width: 100%;
   background-size: cover;
 }

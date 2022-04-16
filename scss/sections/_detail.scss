@@ -11,6 +11,8 @@
 
 .product-box {
   border: 0.1rem solid $gray-500;
+  border-radius: 10px;
+  margin-bottom: 1rem;
   img {
     width: 308px;
     height: 308px;
@@ -215,41 +217,6 @@
 }
 body {
   font-family: var(--sm-font);
-}
-
-/* navbar */
-.navbar {
-  -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
-}
-.navbar-brand span {
-  letter-spacing: 2px;
-  font-family: var(--lg-font);
-}
-
-.nav-item {
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
-
-  .nav-link {
-    &:hover {
-      color: $primary !important ;
-    }
-  }
-}
-
-/* header */
-#header {
-  background: url(../images/banner-img-1.jpg) top/cover no-repeat;
-}
-.carousel-inner h1 {
-  font-size: 60px;
-  font-family: var(--lg-font);
-}
-.carousel-item .btn {
-  border-color: #fff !important;
-}
-.carousel-item .btn:hover {
-  border-color: var(--pink) !important;
 }
 
 /* title */

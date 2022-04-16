@@ -1,7 +1,6 @@
 @use '../custom' as *;
 @use '../components/mixin' as *;
 .menu {
-  position: sticky;
   @include gradient;
 }
 
