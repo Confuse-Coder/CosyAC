@@ -41,7 +41,16 @@
 .nav-icons {
   i {
     padding: 0 0.7rem;
+    font-size: 22px;
     color: $white;
+
+    b {
+      .bg-danger {
+        background-color: $primary !important;
+        left: 130% !important;
+      }
+    }
+
     &:hover {
       color: $primary;
     }

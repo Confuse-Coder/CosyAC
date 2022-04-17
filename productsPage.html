@@ -1,4 +1,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <script src="/assets/js/main.js"></script>
 
 </head>
 
@@ -51,7 +51,12 @@
                     <span class="nav-icons">
                         <i class="fas fa-magnifying-glass"></i>
                         <i class="fas fa-heart"></i>
-                        <i class="fas fa-bag-shopping"></i>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#cart">
+                            <i class="fas fa-bag-shopping position-relative">
+                                <b><span
+                                        class="total-count position-absolute top-0 translate-middle badge rounded-pill bg-danger"></span></b>
+                            </i>
+                        </a>
                     </span>
                 </div>
             </div>
@@ -94,126 +99,178 @@
 
                 <!-- COL - 1 -->
                 <div class="col-md-3 p-2">
+
+                    <!-- Window Air Conditioner -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
-                        data-id="LG11" data-title="LG 1-1" data-size="4.9"" data-weight=" 130 g"
-                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        data-id="LG11" data-title="Window Air Conditioner" data-dimension="880*880*500"
+                        data-capacity="15,000 BTU" data-manufacture="LG" data-warranty="1 Year">
                         <img src="/img/LG/lg-1-1.webp" class="w-100 productImg">
                         <span
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
-                        <span class="fw-bold d-block">$ 45.50</span>
-                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <p class="text-capitalize mt-3 mb-1">Window Air Conditioner</p>
+                        <span class="fw-bold d-block">$ 800</span>
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="Window Air Conditioner"
+                            data-price="800">Add
+                            to
+                            Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
+
+                    <!-- AR9500T AC with AI Auto Cooling -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
-                        data-id="Reetech12" data-title="Reetech 1-2" data-size="4.9"" data-weight=" 130 g"
-                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        data-id="Reetech12" data-title="AR9500T AI Auto" data-dimension="880*250*350"
+                        data-capacity="22,000 BTU" data-manufacture="Reetech" data-warranty="1.5 Year">
                         <img src="/img/Samsung/ss-2-2.png" class="w-100 productImg">
                         <span
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
-                        <span class="fw-bold d-block">$ 45.50</span>
-                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <p class="text-capitalize mt-3 mb-1">AR9500T AI Auto</p>
+                        <span class="fw-bold d-block">$ 850</span>
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR9500T AI Auto"
+                            data-price="850">Add
+                            to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
 
                 <!-- COL - 2 -->
                 <div class="col-md-3 p-2">
+
+                    <!-- AR9500T AC with MDS -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center reetech"
-                        data-id="LG21" data-title="LG 2-1" data-size="4.9"" data-weight=" 130 g"
-                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        data-id="LG21" data-title="AR9500T AC MDS" data-dimension="880*638*310"
+                        data-capacity="22,000 BTU" data-manufacture="LG" data-warranty="1 Year">
                         <img src="/img/Samsung/ss-1-1.webp" class="w-100 productImg">
                         <span
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
-                        <span class="fw-bold d-block">$ 45.50</span>
-                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <p class="text-capitalize mt-3 mb-1">AR9500T AC MDS</p>
+                        <span class="fw-bold d-block">$ 900</span>
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR9500T AC MDS"
+                            data-price="900">Add to
+                            Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
+
+                    <!-- Portable Air Conditioner -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
-                        data-id="Reetech13" data-title="Reetech 1-3" data-size="4.9"" data-weight=" 130 g"
-                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        data-id="Reetech13" data-title="Portable Air Conditioner" data-dimension="880*638*310"
+                        data-capacity="18,000 BTU" data-manufacture="Reetech" data-warranty="3 Year">
                         <img src="/img/LG/lg-2-1.webp" class="w-100 productImg">
                         <span
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
-                        <span class="fw-bold d-block">$ 45.50</span>
-                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <p class="text-capitalize mt-3 mb-1">Portable Air Conditioner</p>
+                        <span class="fw-bold d-block">$ 950</span>
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="Portable Air Conditioner"
+                            data-price="950">Add
+                            to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
 
                 <!-- COL - 3 -->
                 <div class="col-md-3 p-2">
+
+                    <!-- AR9500T AC with Fast Cooling -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
-                        data-id="Samsung14" data-title="Samsung 1-4" data-size="4.9"" data-weight=" 130 g"
-                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        data-id="Samsung14" data-title="AR9500T Fast Cooling" data-dimension="610*450*250"
+                        data-capacity="24,000 BTU" data-manufacture="SamSung" data-warranty="1 Year">
                         <img src="/img/Samsung/ss-2-3.png" class="w-100 productImg">
                         <span
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
-                        <span class="fw-bold d-block">$ 45.50</span>
-                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <p class="text-capitalize mt-3 mb-1">AR9500T Fast Cooling</p>
+                        <span class="fw-bold d-block">$ 1000</span>
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR9500T Fast Cooling"
+                            data-price="1000">Add to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
+
+                    <!-- AR24TSEAFWK AC with Digital Inverter -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center reetech"
-                        data-id="Samsung11" data-title="Samsung 1-1" data-size="4.9"" data-weight=" 130 g"
-                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        data-id="Samsung11" data-title="AR24TSEAFWK Digital Inverter" data-dimension="720*550*350"
+                        data-capacity="30,000 BTU" data-manufacture="SamSung" data-warranty="6 Months">
                         <img src="/img/Samsung/ss-2-1.webp" class="w-100 productImg">
                         <span
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
-                        <span class="fw-bold d-block">$ 45.50</span>
-                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <p class="text-capitalize mt-3 mb-1">AR24TSEAFWK Digital Inverter</p>
+                        <span class="fw-bold d-block">$ 1050</span>
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR24TSEAFWK Digital Inverter"
+                            data-price="1050">Add to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
 
                 <!-- COL - 4 -->
                 <div class="col-md-3 p-2">
+
+                    <!-- LG PuriCare 360 Dual Filter Air Purifier -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
-                        data-id="LG31" data-title="LG 3-1" data-size="4.9"" data-weight=" 130 g"
-                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        data-id="LG31" data-title="LG PuriCare 360" data-dimension="550*350*250"
+                        data-capacity="15,000 BTU" data-manufacture="LG" data-warranty="12 Months">
                         <img src="/img/LG/lg-3-1.jpg" class="w-100 productImg">
                         <span
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
-                        <span class="fw-bold d-block">$ 45.50</span>
-                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <p class="text-capitalize mt-3 mb-1">LG PuriCare 360</p>
+                        <span class="fw-bold d-block">$ 1100</span>
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="LG PuriCare 360"
+                            data-price="1100">Add to
+                            Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
+
+                    <!-- AR24TSHZJWK AC with Digital Inverter -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
-                        data-id="Samsung21" data-title="Samsung 2-1" data-size="4.9"" data-weight=" 130 g"
-                        data-processor="2.3 GHz, Quad Core, Qualcomm Snapdragon 800" data-battery="2300 mAH">
+                        data-id="Samsung21" data-title="AR24TSHZJWK Digital Inverter" data-dimension="650*550*250"
+                        data-capacity="22,000 BTU" data-manufacture="SamSung" data-warranty="18 Months">
                         <img src="/img/Samsung/ss-2-4.webp" class="w-100 productImg">
                         <span
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">Name of Product</p>
-                        <span class="fw-bold d-block">$ 45.50</span>
-                        <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
+                        <p class="text-capitalize mt-3 mb-1">AR24TSHZJWK Digital Inverter</p>
+                        <span class="fw-bold d-block">$ 1150</span>
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR24TSHZJWK Digital Inverter"
+                            data-price="1150">Add to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
             </div>
 
             <!-- END ALL PRODUCTS ZONE -->
+
+            <!-- ADD TO CART => MODAL CART-->
+            <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="show-cart table">
+
+                            </table>
+                            <h3>Total price: $<span class="total-cart"></span></h3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Order now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!--START PREVIEW COMPARE-->
             <div class="w3-container w3-center">
@@ -445,7 +502,10 @@
     </a>
     <!-- END THE FOOTER -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/data.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('.list').click(function () {
