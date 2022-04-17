@@ -28,7 +28,7 @@
 
         var displayTitle = $(this).parents('.selectProduct').attr('data-title');
 
-        var image = $(this).siblings('.productImg').attr('src');
+        var image = $(this).siblings('.sib').children('.productImg').attr('src');
 
         $('.comparePan').append(
           '<div id="' +

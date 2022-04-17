@@ -118,6 +118,10 @@
 }
 
 .ratings {
+  sup {
+    display: inline;
+    font-size: 0.75rem;
+  }
   i {
     color: rgba($primary, 0.7);
     font-size: 1rem;
@@ -148,15 +152,17 @@
 
 .xzoom_details {
   h4 {
-    color: #5d4428;
+    color: $primary;
+    font-size: 30px;
+    font-weight: 700;
     padding-bottom: 10px;
   }
 
   h3 {
-    color: #1f658b;
+    color: $black;
 
     span {
-      color: #555;
+      color: $gray-500;
       font-weight: 300;
       font-size: 25px;
       text-decoration: line-through;
@@ -336,5 +342,18 @@ footer a:hover {
 @media (min-width: 992px) {
   .nav-item {
     border-bottom: none;
+  }
+}
+
+.productImg {
+  cursor: pointer;
+}
+
+.price {
+  color: $primary;
+
+  em {
+    color: $gray-500 !important;
+    text-decoration: line-through;
   }
 }
