@@ -80,6 +80,7 @@
         // Hứng các giá trị cần có vào Column II & III
         var product = $('.selectProduct[data-id="' + list[i] + '"]'); // product hứng sản phẩm đã được selected
         var image = $('.selectProduct[data-id="' + list[i] + '"]')
+          .children('.sib')
           .children('.productImg')
           .attr('src');
         var title = $('.selectProduct[data-id="' + list[i] + '"]').attr('data-title');

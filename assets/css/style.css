@@ -11757,6 +11757,9 @@ footer a:hover {
   transform: scale(1);
 }
 
+.nav-icons {
+  position: relative;
+}
 .nav-icons i {
   padding: 0 0.7rem;
   font-size: 22px;
@@ -11773,6 +11776,10 @@ footer a:hover {
   .nav-icons i {
     display: no;
   }
+}
+
+.insert-top {
+  height: 52.5px;
 }
 
 table {

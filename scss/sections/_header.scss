@@ -4,6 +4,7 @@
   @include gradient;
 }
 
+//NAVBAR
 .navbar-nav {
   li {
     padding: 0 0.7rem;
@@ -39,6 +40,7 @@
   }
 }
 .nav-icons {
+  position: relative;
   i {
     padding: 0 0.7rem;
     font-size: 22px;
@@ -58,4 +60,10 @@
       display: no;
     }
   }
+}
+
+//INSERT TOP
+
+.insert-top {
+  height: 52.5px;
 }
