@@ -26,19 +26,23 @@
       if (list.length < 3) {
         list.push(productID);
 
-        var displayTitle = $(this).parents('.selectProduct').attr('data-title');
-
         var image = $(this).siblings('.sib').children('.productImg').attr('src');
+        var displayDes = $(this).parents('.selectProduct').attr('data-des');
+        var displayPrice = $(this).parents('.selectProduct').attr('data-price');
 
         $('.comparePan').append(
           '<div id="' +
             productID +
-            '" class="relPos titleMargin w3-margin-bottom w3-col l3 m4 s4"><div class="w3-white titleMargin"><a class="selectedItemCloseBtn w3-closebtn cursor">&times</a><img src="' +
+            '" class="relPos w3-margin-bottom w3-col l3 m4 s4"><div class="w3-white"><a class="selectedItemCloseBtn w3-closebtn cursor"><i class="fa-regular fa-trash-can"></i></a><img src="' +
             image +
             '" alt="image" style="height:100px;"/><p id="' +
             productID +
-            '" class="titleMargin1">' +
-            displayTitle +
+            '">' +
+            displayDes +
+            '</p><p id="' +
+            productID +
+            '">' +
+            displayPrice +
             '</p></div></div>'
         );
       }
@@ -78,6 +82,9 @@
       // Lặp những sản phảm đã được add vào List[] vào Column II và III...
       for (var i = 0; i < list.length; i++) {
         // Hứng các giá trị cần có vào Column II & III
+        var src = $('.selectProduct[data-id="' + list[i] + '"]')
+          .children('.sib')
+          .attr('href');
         var product = $('.selectProduct[data-id="' + list[i] + '"]'); // product hứng sản phẩm đã được selected
         var image = $('.selectProduct[data-id="' + list[i] + '"]')
           .children('.sib')
@@ -105,6 +112,16 @@
             '</li>' +
             '<li>' +
             $(product).data('warranty') +
+            '</li>' +
+            '<li>' +
+            '<a href="' +
+            src +
+            '">' +
+            '<button class="rounded-pill btn-rounded">' +
+            'Add' +
+            '</button>' +
+            '</a>' +
+            '</li>' +
             '</ul>' +
             '</div>'
         );
@@ -280,14 +297,14 @@ $('.clear-cart').click(function () {
 function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = `<tr>
-                      <th class="cpu">Product</th>
+                      <th>Product</th>
                       <th>Price</th>
                       <th>Quantity</th>
                       <th>Total</th>
                     </tr>`;
   for (var i in cartArray) {
     output += `<tr>
-                  <td class="cpu">${cartArray[i].name}</td>
+                  <td>${cartArray[i].name}</td>
                   <td>${'$' + cartArray[i].price}</td>
                   <td><div class='input-group'><span class='minus-item input-group-addon btn btn-primary' data-name="${
                     cartArray[i].name

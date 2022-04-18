@@ -11770,9 +11770,6 @@ footer a:hover {
   font-weight: 400;
 }
 
-.input-group .btn {
-  border-radius: 50%;
-}
 .input-group .form-control {
   text-align: center;
 }
@@ -12175,13 +12172,6 @@ a {
   color: inherit;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  display: table;
-}
-
 table,
 th,
 td {
@@ -12550,11 +12540,13 @@ ul.w3-ul li:last-child {
 }
 
 .w3-closebtn {
+  padding-top: 2px;
+  padding-right: 10px;
   text-decoration: none;
   float: right;
   font-size: 24px;
   font-weight: bold;
-  color: inherit;
+  color: #00d5ff;
 }
 
 .w3-closebtn:hover,
@@ -14211,6 +14203,7 @@ input[type=radio].w3-radio:disabled + .w3-validate {
 }
 .comparePanle {
   position: fixed;
+  background-color: #fff;
   bottom: 10px;
   width: 60%;
   left: 50%;
@@ -14219,16 +14212,6 @@ input[type=radio].w3-radio:disabled + .w3-validate {
   z-index: 3;
 }
 
-@media only screen and (max-width: 1367px) {
-  .comparePanle {
-    position: fixed;
-    bottom: 10px;
-    width: 90%;
-    margin-left: 2%;
-    display: none;
-    z-index: 3;
-  }
-}
 .cursor {
   cursor: pointer;
 }
@@ -14280,7 +14263,8 @@ input[type=radio].w3-radio:disabled + .w3-validate {
 }
 
 .relPos {
-  position: relative !important;
+  border-right: 0.1rem solid #495057;
+  padding-left: 10px;
 }
 
 .w3-hexagonBlue {
@@ -14372,24 +14356,10 @@ a {
   width: 80%;
 }
 
-.relPos {
-  position: relative;
-}
-
 .selected {
   border-style: solid !important;
   border-color: #d9d9d9 !important;
   border-width: thin !important;
-}
-
-.comparePanle {
-  position: fixed;
-  bottom: 10px;
-  width: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  z-index: 3;
 }
 
 .product {
@@ -14469,27 +14439,12 @@ a {
     font-size: 8px;
   }
 
-  .comparePanle h4 {
-    font-size: 15px;
-  }
-
   .compareThumb {
     height: 100px;
   }
 
   .compHeader {
     min-height: 150px;
-  }
-}
-@media only screen and (min-width: 993px) {
-  .comparePanle {
-    position: fixed;
-    bottom: 10px;
-    width: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    z-index: 3;
   }
 }
 .slider {
