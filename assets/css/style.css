@@ -11774,6 +11774,22 @@ footer a:hover {
   text-align: center;
 }
 
+.rounded-pill {
+  border: 0.1rem solid #00d5ff;
+}
+.rounded-pill:enabled {
+  color: #00d5ff;
+}
+
+.border-right {
+  border-right: 0.1rem solid #dee2e6;
+  height: 100%;
+}
+
+.i-features i {
+  font-size: 52px;
+}
+
 .menu {
   background: linear-gradient(to right, rgba(0, 213, 255, 0.95), rgba(255, 0, 255, 0.95));
 }

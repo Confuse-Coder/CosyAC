@@ -33,7 +33,7 @@
         $('.comparePan').append(
           '<div id="' +
             productID +
-            '" class="relPos w3-margin-bottom w3-col l3 m4 s4"><div class="w3-white"><a class="selectedItemCloseBtn w3-closebtn cursor"><i class="fa-regular fa-trash-can"></i></a><img src="' +
+            '" class="relPos w3-margin-bottom w3-col l4 m4 s4"><div class="w3-white"><a class="selectedItemCloseBtn w3-closebtn cursor"><i class="fa-regular fa-trash-can"></i></a><img src="' +
             image +
             '" alt="image" style="height:100px;"/><p id="' +
             productID +
