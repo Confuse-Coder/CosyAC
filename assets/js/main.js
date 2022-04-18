@@ -280,21 +280,25 @@ $('.clear-cart').click(function () {
 function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = `<tr>
-                      <th>Name</th>
+                      <th class="cpu">Product</th>
                       <th>Price</th>
                       <th>Quantity</th>
-                      <th> </th>
                       <th>Total</th>
                     </tr>`;
   for (var i in cartArray) {
     output += `<tr>
-                  <td>${cartArray[i].name}</td>
-                  <td>${cartArray[i].price}</td>
-                  <td><div class='input-group'><span class='minus-item input-group-addon btn btn-primary' data-name="${cartArray[i].name}">-</span>
-                      <input type='number' class='item-count form-control' data-name="${cartArray[i].name}" value="${cartArray[i].count}">
-                      <span class='plus-item input-group-addon btn btn-primary' data-name="${cartArray[i].name}">+</span></div></td> 
-                  <td><button class='delete-item btn btn-danger' data-name="${cartArray[i].name}">X</button></td>
-                  <td>${cartArray[i].total}</td>
+                  <td class="cpu">${cartArray[i].name}</td>
+                  <td>${'$' + cartArray[i].price}</td>
+                  <td><div class='input-group'><span class='minus-item input-group-addon btn btn-primary' data-name="${
+                    cartArray[i].name
+                  }">-</span>
+                      <input type='number' class='item-count form-control' data-name="${
+                        cartArray[i].name
+                      }" value="${cartArray[i].count}">
+                      <span class='plus-item input-group-addon btn btn-primary' data-name="${
+                        cartArray[i].name
+                      }">+</span></div></td> 
+                  <td>${'$' + cartArray[i].total}</td>
                   </tr>`;
   }
   $('.show-cart').html(output);
@@ -332,3 +336,25 @@ $('.show-cart').on('change', '.item-count', function () {
 });
 
 displayCart();
+
+//SEARCH BUTTON
+const search = () => {
+  const searchbox = document.getElementById('search-item').value.toUpperCase();
+  const storeitems = document.getElementById('row');
+  const product = document.querySelectorAll('.selectProduct');
+  const pname = storeitems.getElementsByTagName('p');
+
+  for (var i = 0; i < pname.length; i++) {
+    let match = product[i].getElementsByTagName('p');
+
+    if (match) {
+      let textvalue = match[i].textContent || match[i].innerHTML || match[i].innerText;
+
+      if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
+        product[i].style.display = '';
+      } else {
+        product[i].style.display = 'none';
+      }
+    }
+  }
+};

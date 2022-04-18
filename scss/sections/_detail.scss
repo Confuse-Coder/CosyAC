@@ -357,3 +357,33 @@ footer a:hover {
     text-decoration: line-through;
   }
 }
+
+//MODAL DIALOG
+.modal-dialog {
+  max-width: $modal-lg;
+
+  .modal-header {
+    border-bottom: 0.2rem solid rgba($primary, 0.5);
+  }
+
+  .modal-body {
+    border-bottom: 0.2rem solid rgba($primary, 0.5);
+  }
+
+  .modal-footer {
+    .btn {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
+.input-group {
+  .btn {
+    border-radius: 50%;
+  }
+
+  .form-control {
+    text-align: center;
+  }
+}

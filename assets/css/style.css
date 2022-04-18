@@ -11255,6 +11255,24 @@ textarea.form-control-lg {
   background-color: #00d5ff;
 }
 
+.heading-line-1::before {
+  content: "";
+  width: 7rem;
+  height: 0.1rem;
+  display: block;
+  background-color: #00d5ff;
+}
+
+.heading-line-1::after {
+  content: "";
+  width: 2rem;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  background-color: #00d5ff;
+}
+
 .map {
   border: 0.1rem solid rgba(0, 213, 255, 0.5);
   border-radius: 10px;
@@ -11371,6 +11389,20 @@ iframe {
 }
 .border-animation--border-2 {
   animation-delay: 1.5s;
+}
+
+.help-header {
+  font-family: "Poppins", sans-serif;
+}
+.help-header a {
+  color: #00d5ff;
+}
+.help-header a:hover {
+  color: #fff;
+}
+
+.form-check {
+  margin-bottom: 1.5rem;
 }
 
 .portfolio {
@@ -11724,8 +11756,104 @@ footer a:hover {
   text-decoration: line-through;
 }
 
+.modal-dialog {
+  max-width: 800px;
+}
+.modal-dialog .modal-header {
+  border-bottom: 0.2rem solid rgba(0, 213, 255, 0.5);
+}
+.modal-dialog .modal-body {
+  border-bottom: 0.2rem solid rgba(0, 213, 255, 0.5);
+}
+.modal-dialog .modal-footer .btn {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-group .btn {
+  border-radius: 50%;
+}
+.input-group .form-control {
+  text-align: center;
+}
+
 .menu {
   background: linear-gradient(to right, rgba(0, 213, 255, 0.95), rgba(255, 0, 255, 0.95));
+}
+
+.navbarNav {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.searchbar form {
+  position: absolute;
+  right: 3.5px;
+  top: 70px;
+  transform: translate(0%, -50%);
+  transition: all 1s;
+  width: 40px;
+  height: 40px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 1px solid #ff00ff;
+  padding: 5px;
+}
+
+.searchbar > form input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  height: 36px;
+  line-height: 20px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.searchbar form:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+.searchbar form:hover input {
+  display: block;
+}
+
+.searchbar input::placeholder {
+  color: #242424;
+  font-size: 0.8em;
+}
+
+.searchbar > form:hover #search-icon {
+  background: #00d5ff;
+  color: white;
+}
+
+#search-icon {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #00d5ff;
+  text-align: center;
+  font-size: 1rem;
+  transition: all 1s;
+}
+
+#search-icon:active,
+#search-icon:focus {
+  outline: none;
 }
 
 .navbar-nav li {
@@ -11783,11 +11911,9 @@ footer a:hover {
 }
 
 table {
-  width: 90%;
-  border: maroon solid thin;
   text-align: center;
   padding: 1em;
-  margin: 1em;
+  margin: 0;
   box-shadow: 3px 3px 2px lightgrey;
   border-spacing: 2px 0px;
 }
@@ -14309,7 +14435,7 @@ a {
 }
 
 .cpu {
-  min-height: 115px;
+  min-width: 115px;
 }
 
 .titleMargin {

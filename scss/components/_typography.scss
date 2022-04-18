@@ -92,3 +92,19 @@
   margin-bottom: 1rem;
   background-color: $primary;
 }
+.heading-line-1::before {
+  content: '';
+  width: 7rem;
+  height: 0.1rem;
+  display: block;
+  background-color: $primary;
+}
+.heading-line-1::after {
+  content: '';
+  width: 2rem;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  background-color: $primary;
+}

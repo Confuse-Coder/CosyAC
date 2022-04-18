@@ -29,7 +29,7 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-between navbarNav" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item ">
                             <a class="nav-link rounded-pill" aria-current="page" href="/index.html">home</a>
@@ -48,9 +48,17 @@
                         </li>
 
                     </ul>
+
+                    <!-- START ICONS ON NAVBAR -->
                     <span class="nav-icons">
-                        <i class="fas fa-magnifying-glass"></i>
-                        <i class="fas fa-heart"></i>
+                        <!-- START SEARCH BAR -->
+                        <div class="searchbar">
+                            <form>
+                                <input type="search" placeholder="Searching..." id="search-item" onkeyup="search()" />
+                                <i class="fas fa-magnifying-glass" id="search-icon"></i>
+                            </form>
+                        </div>
+                        <!-- START ADD TO CART ICON -->
                         <a href="#" data-bs-toggle="modal" data-bs-target="#cart">
                             <i class="fas fa-bag-shopping position-relative">
                                 <b><span
@@ -76,6 +84,8 @@
                     <a href="/productsPage.html">All Products</a>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div class="row mb-5">
                 <nav>
                     <div class="nav nav-tabs justify-content-end" id="nav-tab" role="tablist">
@@ -94,8 +104,9 @@
                     </div>
                 </nav>
             </div>
-
-            <div class="row">
+        </div>
+        <div class="container">
+            <div class="row" id="row">
 
                 <!-- START ALL PRODUCTS ZONE -->
 
@@ -116,7 +127,7 @@
                         <p class="text-capitalize mt-3 mb-1">Window Air Conditioner</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $800</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="Window Air Conditioner"
-                            data-price="800">Add
+                            data-price="800" data-image="/img/LG/lg-1-1.webp">Add
                             to
                             Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
@@ -136,7 +147,7 @@
                         <p class="text-capitalize mt-3 mb-1">AR9500T AI Auto</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $850</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR9500T AI Auto"
-                            data-price="850">Add
+                            data-price="850" data-image="/img/Samsung/ss-2-2.png">Add
                             to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
@@ -158,8 +169,8 @@
                         </span>
                         <p class="text-capitalize mt-3 mb-1">AR9500T AC MDS</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $900</span>
-                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR9500T AC MDS"
-                            data-price="900">Add to
+                        <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR9500T AC MDS" data-price="900"
+                            data-image="/img/Samsung/ss-1-1.webp">Add to
                             Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
@@ -178,7 +189,7 @@
                         <p class="text-capitalize mt-3 mb-1">Portable Air Conditioner</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $950</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="Portable Air Conditioner"
-                            data-price="950">Add
+                            data-price="950" data-image="/img/LG/lg-2-1.webp">Add
                             to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
@@ -201,7 +212,7 @@
                         <p class="text-capitalize mt-3 mb-1">AR9500T Fast Cooling</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $1000</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR9500T Fast Cooling"
-                            data-price="1000">Add to Cart</a>
+                            data-price="1000" data-image="/img/Samsung/ss-4-1.webp">Add to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
 
@@ -219,7 +230,7 @@
                         <p class="text-capitalize mt-3 mb-1">AR24TSEAFWK Digital Inverter</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $1050</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR24TSEAFWK Digital Inverter"
-                            data-price="1050">Add to Cart</a>
+                            data-price="1050" data-image="/img/Samsung/ss-5-1.webp">Add to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
@@ -241,7 +252,7 @@
                         <p class="text-capitalize mt-3 mb-1">LG PuriCare 360</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $1100</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="LG PuriCare 360"
-                            data-price="1100">Add to
+                            data-price="1100" data-image="/img/LG/lg-3-1.jpg">Add to
                             Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
@@ -260,89 +271,91 @@
                         <p class="text-capitalize mt-3 mb-1">AR24TSHZJWK Digital Inverter</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $1150</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart" data-name="AR24TSHZJWK Digital Inverter"
-                            data-price="1150">Add to Cart</a>
+                            data-price="1150" data-image="/img/Samsung/ss-6-1.webp">Add to Cart</a>
                         <a href="#" class="btn btn-primary mt-3 addToCompare">Compare</a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- END ALL PRODUCTS ZONE -->
+        <!-- END ALL PRODUCTS ZONE -->
 
-            <!-- ADD TO CART => MODAL CART-->
-            <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <table class="show-cart table">
+        <!-- ADD TO CART => MODAL CART-->
+        <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img class="navbar-brand pt-0" src="/img/COSYv2.svg" alt="logo image">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="show-cart table">
 
-                            </table>
-                            <h3>Total price: $<span class="total-cart"></span></h3>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Order now</button>
-                        </div>
+                        </table>
+                        <h3>Total price: $<span class="total-cart"></span></h3>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="/checkout.html">
+                            <button type="button" class="btn btn-primary text-white">Check Out</button>
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!--START PREVIEW COMPARE-->
-            <div class="w3-container w3-center">
-                <div class="w3-row w3-card-4 w3-grey w3-round-large w3-border comparePanle w3-margin-top">
+        <!--START PREVIEW COMPARE-->
+        <div class="w3-container w3-center">
+            <div class="w3-row w3-card-4 w3-grey w3-round-large w3-border comparePanle w3-margin-top">
 
-                    <!-- HEADER OF PREVIEW INCLUDE <H4> & BUTTON -->
-                    <div class="w3-row">
-                        <div class="w3-col l9 m8 s6 w3-margin-top">
-                            <h4>Added for comparison</h4>
-                        </div>
-                        <div class="w3-col l3 m4 s6 w3-margin-top">
-                             
-                            <button class="w3-btn w3-round-small w3-white w3-border notActive cmprBtn"
-                                disabled>Compare</button>
-                        </div>
+                <!-- HEADER OF PREVIEW INCLUDE <H4> & BUTTON -->
+                <div class="w3-row">
+                    <div class="w3-col l9 m8 s6 w3-margin-top">
+                        <h4>Added for comparison</h4>
                     </div>
-
-                    <!-- USE JS TO ADD CONTENT WANNA COMPARE -->
-                    <div class=" titleMargin w3-container comparePan">
+                    <div class="w3-col l3 m4 s6 w3-margin-top">
+                         
+                        <button class="w3-btn w3-round-small w3-white w3-border notActive cmprBtn"
+                            disabled>Compare</button>
                     </div>
                 </div>
-            </div>
-            <!--END PREVIEW COMPARE-->
 
-            <!-- COMPARISION POP-UP-->
-            <div id="id01" class="w3-animate-zoom w3-white w3-modal modPos">
+                <!-- USE JS TO ADD CONTENT WANNA COMPARE -->
+                <div class=" titleMargin w3-container comparePan">
+                </div>
+            </div>
+        </div>
+        <!--END PREVIEW COMPARE-->
+
+        <!-- COMPARISION POP-UP-->
+        <div id="id01" class="w3-animate-zoom w3-white w3-modal modPos">
+            <div class="w3-container">
+                <a onclick="document.getElementById('id01').style.display='none'"
+                    class="whiteFont w3-padding w3-closebtn closeBtn">×</a>
+            </div>
+            <div class="w3-row contentPop w3-margin-top">
+            </div>
+
+        </div>
+        <!-- END COMPARISION POP-UP-->
+
+        <!--  WARNING POP-UP  -->
+
+        <div id="WarningModal" class="w3-modal">
+            <div class="w3-modal-content warningModal">
+                <header class="w3-container w3-teal">
+                    <h3><span>⚠</span>Error</h3>
+                </header>
                 <div class="w3-container">
-                    <a onclick="document.getElementById('id01').style.display='none'"
-                        class="whiteFont w3-padding w3-closebtn closeBtn">×</a>
-                </div>
-                <div class="w3-row contentPop w3-margin-top">
-                </div>
+                    <h4>Maximum of Three products are allowed for comparision</h4>
 
+                </div>
+                <footer class="w3-container w3-right-align">
+                    <button id="warningModalClose" onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-btn w3-hexagonBlue w3-margin-bottom  ">Ok</button>
+                </footer>
             </div>
-            <!-- END COMPARISION POP-UP-->
-
-            <!--  WARNING POP-UP  -->
-
-            <div id="WarningModal" class="w3-modal">
-                <div class="w3-modal-content warningModal">
-                    <header class="w3-container w3-teal">
-                        <h3><span>⚠</span>Error</h3>
-                    </header>
-                    <div class="w3-container">
-                        <h4>Maximum of Three products are allowed for comparision</h4>
-
-                    </div>
-                    <footer class="w3-container w3-right-align">
-                        <button id="warningModalClose" onclick="document.getElementById('id01').style.display='none'"
-                            class="w3-btn w3-hexagonBlue w3-margin-bottom  ">Ok</button>
-                    </footer>
-                </div>
-            </div>
-            <!--  END WARNING POP-UP  -->
+        </div>
+        <!--  END WARNING POP-UP  -->
         </div>
     </section>
     <!-- END PRODUCTS CONTENT -->

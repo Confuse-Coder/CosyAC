@@ -1,10 +1,8 @@
 //Modal
 table {
-  width: 90%;
-  border: maroon solid thin;
   text-align: center;
   padding: 1em;
-  margin: 1em;
+  margin: 0;
   box-shadow: 3px 3px 2px lightgrey;
 
   border-spacing: 2px 0px;
@@ -2152,7 +2150,7 @@ a {
   height: 150px;
 }
 .cpu {
-  min-height: 115px;
+  min-width: 115px;
 }
 
 .titleMargin {

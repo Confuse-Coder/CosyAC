@@ -137,3 +137,21 @@ iframe {
     animation-delay: 1.5s;
   }
 }
+
+//CHECK OUT
+.help-header {
+  font-family: 'Poppins', sans-serif;
+
+  a {
+    color: $primary;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+//CHECKOUT
+.form-check {
+  margin-bottom: 1.5rem;
+}
