@@ -29,19 +29,22 @@
         var image = $(this).siblings('.sib').children('.productImg').attr('src');
         var displayDes = $(this).parents('.selectProduct').attr('data-des');
         var displayPrice = $(this).parents('.selectProduct').attr('data-price');
+        var srcPro = $(this).siblings('.sib').attr('href');
 
         $('.comparePan').append(
           '<div id="' +
             productID +
-            '" class="relPos w3-margin-bottom w3-col l4 m4 s4"><div class="w3-white"><a class="selectedItemCloseBtn w3-closebtn cursor"><i class="fa-regular fa-trash-can"></i></a><img src="' +
+            '" class="relPos w3-col l4 m4 s4"><div class="w3-white"><a class="selectedItemCloseBtn w3-closebtn cursor"><i class="fa-regular fa-trash-can"></i></a><a href="' +
+            srcPro +
+            '"><img src="' +
             image +
-            '" alt="image" style="height:100px;"/><p id="' +
+            '" alt="image" style="height:100px;"/></a><p id="' +
             productID +
             '">' +
             displayDes +
             '</p><p id="' +
             productID +
-            '">' +
+            '"class="fw-bold" >' +
             displayPrice +
             '</p></div></div>'
         );
@@ -68,14 +71,43 @@
     if ($('.cmprBtn').hasClass('active')) {
       // Column I of Comparasion table
       $('.contentPop').append(
-        '<div class="w3-col s3 m3 l3 relPos">' +
+        '<header class="text-white m-5">' +
+          '<h1 class="pt-3">THE #HERO' +
+          '</h1>' +
+          '<h2 class="pt-1">COMMING SOON' +
+          '<h2>' +
+          '<h1 class="countdown">00 : 00 : 00 : 00' +
+          '</h1>' +
+          '</header>' +
+          '<div class="container ">' +
+          '<a href="/productsPage.html">' +
+          '<button type="button" class="btn btn-light">' +
+          '<i class="fa-solid fa-chevron-left">' +
+          '</i>' +
+          '</button>' +
+          '</a>' +
+          '<span class="p-4 fw-bolder">Back' +
+          '</span' +
+          '<div class="row">' +
+          '<div class="display-3 text-center">' +
+          '<h1 class="display-3--tittle-1 fw-bold">Compare' +
+          '</h1>' +
+          '<div class="heading-line">' +
+          '</div>' +
+          '</div>' +
+          '</div>' +
+          '</div>' +
+          '<div class="w3-col s3 m3 l3 pb-5 mb-5">' +
           '<ul class="product">' +
-          '<li class=" relPos compHeader"><p class="w3-display-middle">Products</p></li>' +
-          '<li>Title</li>' +
+          '<li class=" compHeader"></li>' +
+          '<li>Product</li>' +
           '<li>Dimension</li>' +
           '<li>Capacity</li>' +
           "<li>Manufacture's Brand</li>" +
-          '<li>Warranty</li></ul>' +
+          '<li>Warranty</li>' +
+          '<li>Price</li>' +
+          '<li class="text-primary fw-bolder" style="padding:17px 0px;">The #HERO Event<i class="fa-solid fa-gift p-1"></i></li>' +
+          '</ul>' +
           '</div>'
       );
 
@@ -94,7 +126,7 @@
 
         // Column II & III of Comparasion table
         $('.contentPop').append(
-          '<div class="w3-col s3 m3 l3 relPos">' +
+          '<div class="w3-col s3 m3 l3 relPos1 pb-5 mb-5">' +
             '<ul class="product">' +
             '<li class="compHeader"><img src="' +
             image +
@@ -113,12 +145,15 @@
             '<li>' +
             $(product).data('warranty') +
             '</li>' +
+            '<li class="fw-bold">' +
+            $(product).data('price') +
+            '</li>' +
             '<li>' +
             '<a href="' +
             src +
             '">' +
-            '<button class="rounded-pill btn-rounded">' +
-            'Add' +
+            '<button class="btn rounded-pill">' +
+            'Shop Now' +
             '</button>' +
             '</a>' +
             '</li>' +
@@ -302,7 +337,13 @@ function displayCart() {
                       <th>Quantity</th>
                       <th>Total</th>
                     </tr>`;
-  for (var i in cartArray) {
+  var output2 = `<tr>
+  <th>Product</th>
+  <th>Price</th>
+  <th>Quantity</th>
+</tr>`;
+  let sum = 0;
+  for (var i = 0; i < cartArray.length; i++) {
     output += `<tr>
                   <td>${cartArray[i].name}</td>
                   <td>${'$' + cartArray[i].price}</td>
@@ -317,10 +358,23 @@ function displayCart() {
                       }">+</span></div></td> 
                   <td>${'$' + cartArray[i].total}</td>
                   </tr>`;
+    // for (var j = 0; j < cartArray.length; j++ ) {
+    //   var Sum = 0;
+    //   if ()
+    // }
+    output2 += `
+    <tr>
+    <td>${cartArray[i].name}</td>
+    <td>${'$' + cartArray[i].price}</td> 
+    <td>${cartArray[i].count}</td>
+    </tr>
+    `;
   }
+  $('.show-cart-2').html(output2);
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html('$' + shoppingCart.totalCart());
+  $('.total-count1').html(shoppingCart.totalCount());
 }
 
 // Delete-item
@@ -375,3 +429,51 @@ const search = () => {
     }
   }
 };
+
+// Setup End Date for Countdown (getTime == Time in Milleseconds)
+let launchDate = new Date('April 30, 2022 12:00:00').getTime();
+
+// Setup Timer to tick every 1 second
+let timer = setInterval(tick, 1000);
+
+function tick() {
+  // Get current time
+  let now = new Date().getTime();
+  // Get the difference in time to get time left until reaches 0
+  let t = launchDate - now;
+
+  // Check if time is above 0
+  if (t > 0) {
+    // Setup Days, hours, seconds and minutes
+    // Algorithm to calculate days...
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    // prefix any number below 10 with a "0" E.g. 1 = 01
+    if (days < 10) {
+      days = '0' + days;
+    }
+
+    // Algorithm to calculate hours
+    let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    if (hours < 10) {
+      hours = '0' + hours;
+    }
+
+    // Algorithm to calculate minutes
+    let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    if (mins < 10) {
+      mins = '0' + mins;
+    }
+
+    // Algorithm to calc seconds
+    let secs = Math.floor((t % (1000 * 60)) / 1000);
+    if (secs < 10) {
+      secs = '0' + secs;
+    }
+
+    // Create Time String
+    let time = `${days} : ${hours} : ${mins} : ${secs}`;
+
+    // Set time on document
+    document.querySelector('.countdown').innerText = time;
+  }
+}

@@ -11144,7 +11144,7 @@ textarea.form-control-lg {
 }
 .btn-rounded span {
   position: absolute;
-  background-color: #00d5ff;
+  background-color: rgba(255, 0, 255, 0.6);
   width: 2.5rem;
   height: 2.5rem;
   top: 50%;
@@ -11162,7 +11162,8 @@ textarea.form-control-lg {
   color: #fff;
 }
 .btn-rounded:hover span {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 213, 255, 0.6);
+  transition: 1s ease-in-out;
 }
 
 .gradient {
@@ -11420,6 +11421,9 @@ iframe {
 .product-box img {
   width: 308px;
   height: 308px;
+}
+.product-box span .fa-heart:hover {
+  color: #ff00ff;
 }
 
 .portfolio-box {
@@ -11778,7 +11782,16 @@ footer a:hover {
   border: 0.1rem solid #00d5ff;
 }
 .rounded-pill:enabled {
+  background-color: #fff;
   color: #00d5ff;
+}
+
+.add-to-cart {
+  padding: 1rem;
+}
+.add-to-cart:hover {
+  color: #fff;
+  background-color: rgba(0, 213, 255, 0.5);
 }
 
 .border-right {
@@ -11787,6 +11800,7 @@ footer a:hover {
 }
 
 .i-features i {
+  color: #00d5ff;
   font-size: 52px;
 }
 
@@ -11927,8 +11941,60 @@ table {
   text-align: center;
   padding: 1em;
   margin: 0;
-  box-shadow: 3px 3px 2px lightgrey;
+  box-shadow: 3px 3px 3px lightgrey;
   border-spacing: 2px 0px;
+}
+
+.total-price {
+  border: 0.1rem solid #ced4da;
+  box-shadow: lightgrey 3px 3px 2px;
+}
+.badge1 {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+.badge1:empty {
+  display: none;
+}
+
+.table-1 {
+  border: 0.1rem solid #ced4da;
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+}
+.table-1 > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.table-1 > tbody {
+  vertical-align: inherit;
+}
+.table-1 > thead {
+  vertical-align: bottom;
+}
+.table-1 > :not(:first-child) {
+  border-top: 2px solid currentColor;
 }
 
 /* W3.CSS 2.7 by Jan Egil and Borge Refsnes */
@@ -12052,6 +12118,7 @@ input[type=submit] {
 
 button[disabled],
 html input[disabled] {
+  background-color: #fff;
   cursor: default;
 }
 
@@ -12102,7 +12169,7 @@ textarea {
 /* End extract from normalize.css */
 html,
 body {
-  font-family: Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   line-height: 1.5;
 }
@@ -12119,7 +12186,7 @@ h5,
 h6,
 .w3-slim,
 .w3-wide {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -12147,10 +12214,9 @@ h6 {
 }
 
 .w3-serif {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Poppins", sans-serif;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -14279,8 +14345,12 @@ input[type=radio].w3-radio:disabled + .w3-validate {
 }
 
 .relPos {
-  border-right: 0.1rem solid #495057;
+  border-right: 0.1rem solid #ced4da;
   padding-left: 10px;
+}
+
+.relPos1 {
+  border-right: 0.1rem solid #ced4da;
 }
 
 .w3-hexagonBlue {
@@ -14380,15 +14450,11 @@ a {
 
 .product {
   list-style-type: none;
-  border: 1px solid #b5b4b7;
+  border-right: 0.1rem solid #adb5bd;
   margin: 0;
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.product:hover {
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 .product .header {
@@ -14463,6 +14529,32 @@ a {
     min-height: 150px;
   }
 }
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 10vh;
+  background-image: url("/img/Countdown/kutan-ural-jxnkI0bAnhw-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+header:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+header h1 {
+  color: #00d5ff;
+}
+
 .slider {
   position: relative;
   margin-top: 52.5px;

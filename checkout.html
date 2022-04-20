@@ -33,7 +33,7 @@
     <section id="nav">
         <nav class="navbar navbar-expand-lg navbar-light menu shadow ">
             <div class="container">
-                <a class="navbar-brand pt-0" href="#">
+                <a class="navbar-brand pt-0" href="/index.html">
                     <img src="/img/COSY.svg" alt="logo image">
                 </a>
                 <div class="help-header text-center">
@@ -73,265 +73,220 @@
                 <div class="heading-line-1 mb-4"></div>
             </div>
             <div class="row g-5">
-                <div class="col-md-5 col-lg-4 order-md-last">
+                <div class="col-md-6 col-lg-5 order-md-last">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
                         <span class="text-primary">Your cart</span>
-                        <span class="badge bg-primary rounded-pill">3</span>
+                        <span class="total-count1 badge1 bg-primary rounded-pill"></span>
                     </h4>
-                    <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">Product name</h6>
-                                <small class="text-muted">Brief description</small>
-                            </div>
-                            <span class="text-muted">$12</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">Second product</h6>
-                                <small class="text-muted">Brief description</small>
-                            </div>
-                            <span class="text-muted">$8</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">Third item</h6>
-                                <small class="text-muted">Brief description</small>
-                            </div>
-                            <span class="text-muted">$5</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between bg-light">
-                            <div class="text-success">
-                                <h6 class="my-0">Promo code</h6>
-                                <small>EXAMPLECODE</small>
-                            </div>
-                            <span class="text-success">−$5</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between">
-                            <span>Total (USD)</span>
-                            <strong>$20</strong>
-                        </li>
-                    </ul>
+                    <table class="show-cart-2 table-1">
 
-                    <form class="card p-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Promo code">
-                            <button type="submit" class="btn btn-secondary">Redeem</button>
-                        </div>
-                    </form>
+                    </table>
+                    <h4 class="total-price mt-0 p-3 text-end text-white bg-primary">Total price: $<span
+                            class="total-cart"></span></h4>
+                    <form id="details" class="needs-validation" novalidate="">
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">Complete <span class="p-3"><i
+                                    class="fa-solid fa-check"></i></span></button>
+
                 </div>
-                <div class="col-md-7 col-lg-8">
+                <div class="col-md-6 col-lg-7">
                     <h4 class="mb-3">Billing address</h4>
-                    <form class="needs-validation" novalidate="">
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <label for="firstName" class="form-label">First name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="firstName" required="">
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="lastName" required="">
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="username" class="form-label">Email</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">@</span>
+                                <input type="email" class="form-control" id="email" placeholder="You@Example.com"
                                     required="">
                                 <div class="invalid-feedback">
-                                    Valid first name is required.
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <label for="lastName" class="form-label">Last name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="" value=""
-                                    required="">
-                                <div class="invalid-feedback">
-                                    Valid last name is required.
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="username" class="form-label">Username</label>
-                                <div class="input-group has-validation">
-                                    <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" id="username" placeholder="Username"
-                                        required="">
-                                    <div class="invalid-feedback">
-                                        Your username is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="email" class="form-label">Email <span
-                                        class="text-muted">(Optional)</span></label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address for shipping updates.
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" placeholder="1234 Main St"
-                                    required="">
-                                <div class="invalid-feedback">
-                                    Please enter your shipping address.
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="address2" class="form-label">Address 2 <span
-                                        class="text-muted">(Optional)</span></label>
-                                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-                            </div>
-
-                            <div class="col-md-5">
-                                <label for="country" class="form-label">Country</label>
-                                <select class="form-select" id="country" required="">
-                                    <option value="">Choose...</option>
-                                    <option>Viet Nam</option>
-                                    <option>Canada</option>
-                                    <option>Japan</option>
-                                    <option>Germany</option>
-                                    <option>New Zealand</option>
-                                    <option>United Kingdom</option>
-                                    <option>Switzerland</option>
-                                    <option>Germany</option>
-                                    <option>Spain</option>
-                                    <option>Italy</option>
-                                    <option>France</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select a valid country.
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <label for="state" class="form-label">City</label>
-                                <select class="form-select" id="state" required="">
-                                    <option value="">Choose...</option>
-                                    <option>Ho Chi Minh</option>
-                                    <option>Ha Noi</option>
-                                    <option>Da Nang</option>
-                                    <option>Paris</option>
-                                    <option>New York</option>
-                                    <option>Moscow</option>
-                                    <option>Dubai</option>
-                                    <option>Tokyo</option>
-                                    <option>Los Angeles</option>
-                                    <option>London</option>
-                                    <option>Barcelona</option>
-                                    <option>Rome</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please provide a valid state.
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <label for="zip" class="form-label">Zip</label>
-                                <input type="text" class="form-control" id="zip" placeholder="" required="">
-                                <div class="invalid-feedback">
-                                    Zip code required.
+                                    Your email is required.
                                 </div>
                             </div>
                         </div>
 
-                        <hr class="my-4">
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="same-address">
-                            <label class="form-check-label" for="same-address">Shipping address is the same as my
-                                billing address</label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="save-info">
-                            <label class="form-check-label" for="save-info">Save this information for next time</label>
-                        </div>
-
-                        <hr class="my-4">
-
-                        <h4 class="mb-3">Payment</h4>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="my-3">
-                                    <div class="form-check">
-                                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
-                                            checked="" required="">
-                                        <img src="/img/Logo Fintech/medium.svg" alt="">
-                                        <label class="form-check-label" for="credit">MBBank card</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input id="debit" name="paymentMethod" type="radio" class="form-check-input"
-                                            required="">
-                                        <img src="/img/Logo Fintech/visa.svg" alt="">
-                                        <label class="form-check-label" for="debit">VietcomBank card</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input"
-                                            required="">
-                                        <img src="/img/Logo Fintech/world_pay.svg" alt="">
-                                        <label class="form-check-label" for="paypal">SHB card</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="my-3">
-                                    <div class="form-check">
-                                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
-                                            checked="" required="">
-                                        <img src="/img/Logo Fintech/yandex.svg" alt="">
-                                        <label class="form-check-label" for="credit">TechcomBank card</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input id="debit" name="paymentMethod" type="radio" class="form-check-input"
-                                            required="">
-                                        <img src="/img/Logo Fintech/yandex_kassa.svg" alt="">
-                                        <label class="form-check-label" for="debit">VPBank card</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input"
-                                            required="">
-                                        <img src="/img/Logo Fintech/zapier.svg" alt="">
-                                        <label class="form-check-label" for="paypal">ACB card</label>
-                                    </div>
-                                </div>
+                        <div class="col-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address"
+                                placeholder="1234 Cach Mang Thang Tam St" required="">
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
                             </div>
                         </div>
 
-                        <div class="row gy-3">
-                            <div class="col-md-6">
-                                <label for="cc-name" class="form-label">Name on card</label>
-                                <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-                                <small class="text-muted">Full name as displayed on card</small>
-                                <div class="invalid-feedback">
-                                    Name on card is required
-                                </div>
-                            </div>
+                        <div class="col-12">
+                            <label for="address2" class="form-label">Address 2 <span
+                                    class="text-muted">(Optional)</span></label>
+                            <input type="text" class="form-control" id="address2" placeholder="Apartment or Suite">
+                        </div>
 
-                            <div class="col-md-6">
-                                <label for="cc-number" class="form-label">Credit card number</label>
-                                <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-                                <div class="invalid-feedback">
-                                    Credit card number is required
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <label for="cc-expiration" class="form-label">Expiration</label>
-                                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                                <div class="invalid-feedback">
-                                    Expiration date required
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <label for="cc-cvv" class="form-label">CVV</label>
-                                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                                <div class="invalid-feedback">
-                                    Security code required
-                                </div>
+                        <div class="col-md-5">
+                            <label for="country" class="form-label">Country</label>
+                            <select class="form-select" id="country" required="">
+                                <option>Choose...</option>
+                                <option value="Viet Nam">Viet Nam</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Germany">Germany</option>
+                                <option value="New Zealand">New Zealand</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Italy">Italy</option>
+                                <option value="France">France</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
                             </div>
                         </div>
 
-                        <hr class="my-4">
+                        <div class="col-md-4">
+                            <label for="state" class="form-label">City</label>
+                            <select class="form-select" id="state" required="">
+                                <option>Choose...</option>
+                                <option value="Ho Chi Minh">Ho Chi Minh</option>
+                                <option value="Ha Noi">Ha Noi</option>
+                                <option value="Da Nang">Da Nang</option>
+                                <option value="Paris">Paris</option>
+                                <option value="New York">New York</option>
+                                <option value="Moscow">Moscow</option>
+                                <option value="Dubai">Dubai</option>
+                                <option value="Tokyo">Tokyo</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                                <option value="London">London</option>
+                                <option value="Barcelona">Barcelona</option>
+                                <option value="Rome">Rome</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
 
-                        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                        <div class="col-md-3">
+                            <label for="zip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="zip" placeholder="100000" required="">
+                            <div class="invalid-feedback">
+                                Zip code required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="same-address">
+                        <label class="form-check-label" for="same-address">Shipping address is the same as my
+                            billing address</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="save-info">
+                        <label class="form-check-label" for="save-info">Save this information for next time</label>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h4 class="mb-3">Payment</h4>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="my-3">
+                                <div class="form-check">
+                                    <input id="credit" name="paymentMethod" value="MBBank card" type="radio"
+                                        class="form-check-input" checked="" required="">
+                                    <img src="/img/Logo Fintech/medium.svg" alt="">
+                                    <label class="form-check-label" for="credit">MBBank card</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="debit" name="paymentMethod" value="VietcomBank card" type="radio"
+                                        class="form-check-input" required="">
+                                    <img src="/img/Logo Fintech/visa.svg" alt="">
+                                    <label class="form-check-label" for="debit">VietcomBank card</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="paypal" name="paymentMethod" value="SHB card" type="radio"
+                                        class="form-check-input" required="">
+                                    <img src="/img/Logo Fintech/world_pay.svg" alt="">
+                                    <label class="form-check-label" for="paypal">SHB card</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="my-3">
+                                <div class="form-check">
+                                    <input id="credit" name="paymentMethod" value="TechcomBank card" type="radio"
+                                        class="form-check-input" checked="" required="">
+                                    <img src="/img/Logo Fintech/yandex.svg" alt="">
+                                    <label class="form-check-label" for="credit">TechcomBank card</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="debit" name="paymentMethod" value="VPBank card" type="radio"
+                                        class="form-check-input" required="">
+                                    <img src="/img/Logo Fintech/yandex_kassa.svg" alt="">
+                                    <label class="form-check-label" for="debit">VPBank card</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="paypal" name="paymentMethod" value="ACB card" type="radio"
+                                        class="form-check-input" required="">
+                                    <img src="/img/Logo Fintech/zapier.svg" alt="">
+                                    <label class="form-check-label" for="paypal">ACB card</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                            <label for="cc-name" class="form-label">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                            <small class="text-muted">Full name as displayed on card</small>
+                            <div class="invalid-feedback">
+                                Name on card is required
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="cc-number" class="form-label">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Credit card number is required
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-expiration" class="form-label">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Expiration date required
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Security code required
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
                     </form>
                 </div>
             </div>
@@ -540,6 +495,20 @@
                 $(this).addClass('active').siblings().removeClass('active');
             })
 
+        })
+    </script>
+    <script>
+        const formDetails = document.getElementById("details");
+        formDetails.addEventListener("submit", async (ev) => {
+            ev.preventDefault();
+            var fName = document.getElementById("firstName").value;
+            var mEmail = document.getElementById("email").value;
+            var addr = document.getElementById("address").value;
+            var country = document.getElementById("country").value;
+            var state = document.getElementById("state").value;
+            var zip = document.getElementById("zip").value;
+            var payment = document.querySelector('input[class="form-check-input"]:checked').value;
+            alert("Hello " + fName + '\n' + "Email: " + mEmail + '\n' + "Address: " + addr + '\n' + "Country: " + country + '\n' + "City: " + state + "Zip: " + zip + '\n' + "Payment: " + payment + '\n');
         })
     </script>
 </body>

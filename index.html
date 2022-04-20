@@ -46,10 +46,22 @@
                         </li>
 
                     </ul>
+                    <!-- START ICONS ON NAVBAR -->
                     <span class="nav-icons">
-                        <i class="fas fa-magnifying-glass"></i>
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-bag-shopping"></i>
+                        <!-- START SEARCH BAR -->
+                        <div class="searchbar">
+                            <form>
+                                <input type="search" placeholder="Searching..." id="search-item" onkeyup="search()" />
+                                <i class="fas fa-magnifying-glass" id="search-icon"></i>
+                            </form>
+                        </div>
+                        <!-- START ADD TO CART ICON -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#cart">
+                            <i class="fas fa-bag-shopping position-relative">
+                                <b><span
+                                        class="total-count position-absolute top-0 translate-middle badge rounded-pill bg-danger"></span></b>
+                            </i>
+                        </a>
                     </span>
                 </div>
             </div>
@@ -440,7 +452,8 @@
                         </svg>
                     </div>
                     <div class="contact-box__info">
-                        <a href="" class="contact-box__info--title">support.office@cosy.com</a>
+                        <a href="mailto:example@foo.com?subject=hello world" class="contact-box__info--title">Email
+                            Us</a>
                         <p class="contact-box__info--subtitle">Offline Support</p>
                     </div>
                 </div>

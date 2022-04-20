@@ -17,6 +17,14 @@
     width: 308px;
     height: 308px;
   }
+
+  span {
+    .fa-heart {
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
 }
 
 .portfolio-box {
@@ -389,7 +397,17 @@ footer a:hover {
   border: 0.1rem solid $primary;
 
   &:enabled {
+    background-color: $white;
     color: $primary;
+  }
+}
+
+.add-to-cart {
+  padding: 1rem;
+
+  &:hover {
+    color: $white;
+    background-color: rgba($primary, 0.5);
   }
 }
 
@@ -402,6 +420,7 @@ footer a:hover {
 //ICON PRODUCT DETAILS
 .i-features {
   i {
+    color: $primary;
     font-size: 52px;
   }
 }
