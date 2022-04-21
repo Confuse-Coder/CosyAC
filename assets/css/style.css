@@ -11786,10 +11786,11 @@ footer a:hover {
   color: #00d5ff;
 }
 
-.add-to-cart {
+.add-to-cart-1 {
+  font-weight: 500;
   padding: 1rem;
 }
-.add-to-cart:hover {
+.add-to-cart-1:hover {
   color: #fff;
   background-color: rgba(0, 213, 255, 0.5);
 }
