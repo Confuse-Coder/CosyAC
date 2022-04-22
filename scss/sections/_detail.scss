@@ -406,6 +406,16 @@ footer a:hover {
   }
 }
 
+.rounded-pill-1 {
+  border: 0.1rem solid $secondary;
+  border-radius: 50px;
+}
+
+.rounded-pill-2 {
+  border: 0.1rem solid $primary;
+  border-radius: 50px;
+}
+
 .add-to-cart-1 {
   font-weight: 500;
   padding: 1rem;

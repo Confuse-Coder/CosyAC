@@ -11790,6 +11790,16 @@ footer a:hover {
   color: #00d5ff;
 }
 
+.rounded-pill-1 {
+  border: 0.1rem solid #ff00ff;
+  border-radius: 50px;
+}
+
+.rounded-pill-2 {
+  border: 0.1rem solid #00d5ff;
+  border-radius: 50px;
+}
+
 .add-to-cart-1 {
   font-weight: 500;
   padding: 1rem;
@@ -14551,7 +14561,7 @@ header {
   align-items: center;
   text-align: center;
   min-height: 10vh;
-  background-image: url("/img/Countdown/kutan-ural-jxnkI0bAnhw-unsplash.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.539), rgba(0, 0, 0, 0.5)), url("/img/Countdown/kutan-ural-jxnkI0bAnhw-unsplash.jpg");
   background-size: cover;
   background-position: center;
   position: relative;

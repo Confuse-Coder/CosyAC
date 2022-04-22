@@ -2256,7 +2256,8 @@ header {
   align-items: center;
   text-align: center;
   min-height: 10vh;
-  background-image: url('/img/Countdown/kutan-ural-jxnkI0bAnhw-unsplash.jpg');
+  background: linear-gradient(rgba($black, 0.539), rgba($black, 0.5)),
+    url('/img/Countdown/kutan-ural-jxnkI0bAnhw-unsplash.jpg');
   background-size: cover;
   background-position: center;
 

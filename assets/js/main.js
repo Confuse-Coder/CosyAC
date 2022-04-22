@@ -106,7 +106,7 @@
           "<li>Manufacture's Brand</li>" +
           '<li>Warranty</li>' +
           '<li>Price</li>' +
-          '<li class="text-primary fw-bolder" style="padding:17px 0px;">The #HERO Event<i class="fa-solid fa-gift p-1"></i></li>' +
+          '<li class="text-secondary fw-bolder" style="padding:17px 0px;">The #HERO Event<i class="fa-solid fa-gift p-1"></i></li>' +
           '</ul>' +
           '</div>'
       );
@@ -152,7 +152,7 @@
             '<a href="' +
             src +
             '">' +
-            '<button class="btn rounded-pill">' +
+            '<button class="btn rounded-pill-1 fw-bold ">' +
             'Shop Now' +
             '</button>' +
             '</a>' +
@@ -358,10 +358,6 @@ function displayCart() {
                       }">+</span></div></td> 
                   <td>${'$' + cartArray[i].total}</td>
                   </tr>`;
-    // for (var j = 0; j < cartArray.length; j++ ) {
-    //   var Sum = 0;
-    //   if ()
-    // }
     output2 += `
     <tr>
     <td>${cartArray[i].name}</td>
@@ -409,50 +405,37 @@ $('.show-cart').on('change', '.item-count', function () {
 displayCart();
 
 //COUNTDOWN EVENT
-// Setup End Date for Countdown (getTime == Time in Milleseconds)
 let launchDate = new Date('April 30, 2022 12:00:00').getTime();
 
-// Setup Timer to tick every 1 second
 let timer = setInterval(tick, 1000);
 
 function tick() {
-  // Get current time
   let now = new Date().getTime();
-  // Get the difference in time to get time left until reaches 0
   let t = launchDate - now;
 
-  // Check if time is above 0
   if (t > 0) {
-    // Setup Days, hours, seconds and minutes
-    // Algorithm to calculate days...
     let days = Math.floor(t / (1000 * 60 * 60 * 24));
-    // prefix any number below 10 with a "0" E.g. 1 = 01
     if (days < 10) {
       days = '0' + days;
     }
 
-    // Algorithm to calculate hours
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     if (hours < 10) {
       hours = '0' + hours;
     }
 
-    // Algorithm to calculate minutes
     let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     if (mins < 10) {
       mins = '0' + mins;
     }
 
-    // Algorithm to calc seconds
     let secs = Math.floor((t % (1000 * 60)) / 1000);
     if (secs < 10) {
       secs = '0' + secs;
     }
 
-    // Create Time String
     let time = `${days} : ${hours} : ${mins} : ${secs}`;
 
-    // Set time on document
     document.querySelector('.countdown').innerText = time;
   }
 }
