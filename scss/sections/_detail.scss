@@ -9,6 +9,10 @@
   }
 }
 
+.product-list-item {
+  border-bottom: 0.1rem solid $gray-500;
+}
+
 .product-box {
   border: 0.1rem solid $gray-500;
   border-radius: 10px;

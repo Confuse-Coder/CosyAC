@@ -44,6 +44,17 @@
 
                 <!-- START ICONS ON NAVBAR -->
                 <span class="nav-icons">
+                    <!-- START SEARCH BAR -->
+                    <div class="searchbar">
+                        <form id="formSearch">
+                            <input type="text" class="form-control mb-5 p-3" placeholder="Searching..." id="search"
+                                name="search" />
+                            <i class="fas fa-magnifying-glass" id="search-icon"></i>
+                            <ul class="list-group list-group-flush mt-5 position-relative"
+                                style="list-style-type: none;" id="result">
+                            </ul>
+                        </form>
+                    </div>
                     <!-- START ADD TO CART ICON -->
                     <a href="#" data-bs-toggle="modal" data-bs-target="#cart">
                         <i class="fas fa-bag-shopping position-relative">
@@ -56,6 +67,52 @@
             </div>
         </nav>
     </section>
+
+    <!-- ADD TO CART => MODAL CART-->
+    <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="navbar-brand pt-0" src="/img/COSYv2.svg" alt="logo image">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <h3>Total price: $<span class="total-cart"></span></h3>
+                </div>
+                <div class="modal-footer">
+                    <a href="/checkout.html">
+                        <button type="button" class="btn btn-primary text-white text-end">Check
+                            Out</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--START PREVIEW COMPARE-->
+    <div class="w3-container w3-center">
+        <div class="w3-row w3-card-4 w3-round-large w3-border comparePanle w3-margin-top">
+
+            <!-- HEADER OF PREVIEW INCLUDE <H4> & BUTTON -->
+            <div class="row">
+                <div class="col-md-10">
+
+                </div>
+                <div class="col-md-2 mb-2 mt-2">
+                     
+                    <button class="cmprBtn rounded-pill fw-bolder" disabled>Compare</button>
+                </div>
+            </div>
+
+            <!-- USE JS TO ADD CONTENT WANNA COMPARE -->
+            <div class=" titleMargin w3-container comparePan">
+            </div>
+        </div>
+    </div>
+    <!--END PREVIEW COMPARE-->
 
     <div class="container">
         <main>

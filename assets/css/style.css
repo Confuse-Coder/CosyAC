@@ -11413,6 +11413,10 @@ iframe {
   text-transform: capitalize;
 }
 
+.product-list-item {
+  border-bottom: 0.1rem solid #adb5bd;
+}
+
 .product-box {
   border: 0.1rem solid #adb5bd;
   border-radius: 10px;
@@ -11805,6 +11809,13 @@ footer a:hover {
   font-size: 52px;
 }
 
+.list-group {
+  justify-content: center;
+  display: none;
+  width: 420px;
+  justify-content: center;
+}
+
 .menu {
   background: linear-gradient(to right, rgba(0, 213, 255, 0.95), rgba(255, 0, 255, 0.95));
 }
@@ -11844,9 +11855,12 @@ footer a:hover {
   border-radius: 20px;
   padding: 0 20px;
 }
+.searchbar > form input:focus {
+  width: 445px;
+}
 
 .searchbar form:hover {
-  width: 300px;
+  width: 450px;
   cursor: pointer;
 }
 

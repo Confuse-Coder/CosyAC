@@ -408,28 +408,7 @@ $('.show-cart').on('change', '.item-count', function () {
 
 displayCart();
 
-//SEARCH BUTTON
-const search = () => {
-  const searchbox = document.getElementById('search-item').value.toUpperCase();
-  const storeitems = document.getElementById('row');
-  const product = document.querySelectorAll('.selectProduct');
-  const pname = storeitems.getElementsByTagName('p');
-
-  for (var i = 0; i < pname.length; i++) {
-    let match = product[i].getElementsByTagName('p');
-
-    if (match) {
-      let textvalue = match[i].textContent || match[i].innerHTML || match[i].innerText;
-
-      if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
-        product[i].style.display = '';
-      } else {
-        product[i].style.display = 'none';
-      }
-    }
-  }
-};
-
+//COUNTDOWN EVENT
 // Setup End Date for Countdown (getTime == Time in Milleseconds)
 let launchDate = new Date('April 30, 2022 12:00:00').getTime();
 
