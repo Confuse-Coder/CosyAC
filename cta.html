@@ -194,6 +194,51 @@
     </div>
     <!--END PREVIEW COMPARE-->
 
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible"><span class="m-3">C O S Y</span>here
+            <i id="chat-icon" class="fa-regular fa-comment"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send...">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: #333;" class="fa-solid fa-paper-plane"
+                                    onclick="sendButton()"></i>
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 
     <!-- START THE FOOTER -->
     <footer>
@@ -353,6 +398,8 @@
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/data.js"></script>
+    <script src="/assets/js/responses.js"></script>
+    <script src="/assets/js/chat.js"></script>
 
 </body>
 
