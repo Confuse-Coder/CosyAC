@@ -80,13 +80,11 @@ function getBotResponse(input) {
   //Simple responses 3
   if (input == 'Hey you, I hot') {
     return 'Let Shopping with Cosy <3';
-  } else if (input == 'Hey you, I cold') {
-    return "Are you buy Cosy's Air Conditioner ?";
+  } else if (input == 'Hey Cosy!') {
+    return 'Hey, Hi';
   }
   //rock paper scissors
-  if (input == 'rock') {
-    return 'paper';
-  } else if (input == 'i miss you') {
+  if (input == 'i miss you') {
     return 'i miss you too';
   } else if (input == 'I MISS YOU') {
     return 'I MISS YOU TOO';

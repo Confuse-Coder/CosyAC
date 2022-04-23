@@ -11794,6 +11794,11 @@ footer a:hover {
   border: 0.1rem solid #ff00ff;
   border-radius: 50px;
 }
+@media (max-width: 767.98px) {
+  .rounded-pill-1 {
+    font-size: 0.5rem;
+  }
+}
 
 .rounded-pill-2 {
   border: 0.1rem solid #00d5ff;
@@ -12006,6 +12011,12 @@ footer a:hover {
   position: relative;
 }
 
+@media (max-width: 991.98px) {
+  .searchbar {
+    display: none;
+  }
+}
+
 .searchbar form {
   position: absolute;
   right: 3.5px;
@@ -12078,6 +12089,12 @@ footer a:hover {
   outline: none;
 }
 
+@media (max-width: 991.98px) {
+  .searchbar-2 {
+    display: block;
+  }
+}
+
 .navbar-nav li {
   padding: 0 0.7rem;
 }
@@ -12127,7 +12144,6 @@ footer a:hover {
     display: no;
   }
 }
-
 .insert-top {
   height: 52.5px;
 }
@@ -14027,6 +14043,30 @@ input[type=radio].w3-radio:disabled + .w3-validate {
   background-color: #fff !important;
 }
 
+@media (max-width: 991.98px) {
+  .w3-white a img {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .comparePan-text-1 {
+    font-size: 0.85rem;
+    text-align: start;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .btn-dis {
+    margin: 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .btn-dis__1 {
+    margin: 15px;
+  }
+}
+
 .w3-black,
 .w3-hover-black:hover {
   color: #fff !important;
@@ -14676,6 +14716,23 @@ a {
 .compHeader {
   min-height: 200px;
 }
+@media (max-width: 991.98px) {
+  .compHeader {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .compHeader-2 {
+    padding: 16px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-event {
+    padding: 14px !important;
+  }
+}
 
 .compareThumb {
   height: 150px;
@@ -14777,6 +14834,52 @@ header h1 {
 }
 .breadcrumb i {
   padding-right: 15px;
+}
+
+.testimonials {
+  position: relative;
+  padding: 0;
+  background: linear-gradient(to right, rgba(0, 213, 255, 0.95), rgba(255, 0, 255, 0.95));
+}
+.testimonials__card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem 1.25rem;
+  border-radius: 0.625rem;
+  height: auto;
+  text-align: center;
+}
+.testimonials__card i {
+  font-size: 1.5rem;
+  color: rgba(0, 213, 255, 0.7);
+}
+.testimonials__card .ratings i {
+  color: rgba(0, 213, 255, 0.7);
+  font-size: 1rem;
+}
+.testimonials__picture {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.testimonials__picture img {
+  border: 0.325rem solid rgba(0, 213, 255, 0.7);
+}
+.testimonials__name {
+  padding-top: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+}
+.testimonials__name h3 {
+  padding-top: 0.8rem;
+  text-transform: capitalize;
+}
+.testimonials__name p {
+  padding-bottom: 2rem;
+  text-transform: capitalize;
 }
 
 footer {

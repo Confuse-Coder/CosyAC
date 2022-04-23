@@ -1,5 +1,3 @@
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
 </head>
 
@@ -63,7 +62,7 @@
                             </form>
                         </div>
                         <!-- START ADD TO CART ICON -->
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#cart">
+                        <a class="navcart" href="#" data-bs-toggle="modal" data-bs-target="#cart">
                             <i class="fas fa-bag-shopping position-relative">
                                 <b><span
                                         class="total-count position-absolute top-0 translate-middle badge rounded-pill bg-danger"></span></b>
@@ -121,7 +120,7 @@
 
                     <!-- Window Air Conditioner -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
-                        data-id="LG11" data-title="Window Air Conditioner"
+                        data-id="LG11" data-title="Window AC Air Air"
                         data-des="15,000 BTU Smart Wi-Fi Enabled Window Air Conditioner" data-price="$800"
                         data-dimension="880*880*500" data-capacity="15,000 BTU" data-manufacture="LG"
                         data-warranty="1 Year">
@@ -144,7 +143,7 @@
                     <!-- AR9500T AC with AI Auto Cooling -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
                         data-id="Reetech12" data-title="AR9500T AI Auto"
-                        data-des="22000 BTU Enjoy a more intelligent way of living" data-price="$850"
+                        data-des="22,000 BTU, WindFree™ Cooling AR9500T Air Conditioner" data-price="$850"
                         data-dimension="880*250*350" data-capacity="22,000 BTU" data-manufacture="Reetech"
                         data-warranty="1.5 Year">
                         <a href="/productDetail-6.html" class="sib">
@@ -154,7 +153,7 @@
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">AR9500T AI Auto</p>
+                        <p class="text-capitalize mt-3 mb-1">AR9500T AI Auto Fast Cooling</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $850</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart mb-4" data-name="AR9500T AI Auto"
                             data-price="850" data-image="/img/Samsung/ss-2-2.png">Add
@@ -169,7 +168,7 @@
                     <!-- AR9500T AC with MDS -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center reetech"
                         data-id="LG21" data-title="AR9500T AC MDS"
-                        data-des="17,000 BTU wind-free AC makes life easier comfortable" data-price="$900"
+                        data-des="22,000 BTU, AI Auto Cooling AR95000T  with Fast Cooling" data-price="$900"
                         data-dimension="880*638*310" data-capacity="22,000 BTU" data-manufacture="LG"
                         data-warranty="1 Year">
                         <a href="/productDetail-2.html" class="sib">
@@ -179,7 +178,7 @@
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">AR9500T AC MDS</p>
+                        <p class="text-capitalize mt-3 mb-1">AR9500T AC MDS with AI</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $900</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart mb-4" data-name="AR9500T AC MDS"
                             data-price="900" data-image="/img/Samsung/ss-1-1.webp">Add to
@@ -189,8 +188,8 @@
 
                     <!-- Portable Air Conditioner -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
-                        data-id="Reetech13" data-title="Portable Air Conditioner"
-                        data-des="18,000 BTU portable AC provide exceptional cooling power." data-price="$950"
+                        data-id="Reetech13" data-title="Portable Air Air Con"
+                        data-des="18,000 BTU, LG PuriCare 360 Dual Filter Air Purifier" data-price="$950"
                         data-dimension="880*638*310" data-capacity="18,000 BTU" data-manufacture="Reetech"
                         data-warranty="3 Year">
                         <a href="/productDetail-8.html" class="sib">
@@ -214,8 +213,8 @@
 
                     <!-- AR9500T AC with Fast Cooling -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
-                        data-id="Samsung14" data-title="AR9500T Fast Cooling"
-                        data-des="24,000 BTU Reduces noise and energy use by 73%*" data-price="$1000"
+                        data-id="Samsung14" data-title="9500 Fast Cooling"
+                        data-des="15,000 BTU, ART9500T Air Conditioner AI Auto Cooling" data-price="$1000"
                         data-dimension="610*450*250" data-capacity="24,000 BTU" data-manufacture="SamSung"
                         data-warranty="1 Year">
                         <a href="/productDetail-3.html" class="sib">
@@ -225,7 +224,7 @@
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">AR9500T Fast Cooling</p>
+                        <p class="text-capitalize mt-3 mb-1">AR9500T AI Wi-fi Fast Cooling</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $1000</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart mb-4" data-name="AR9500T Fast Cooling"
                             data-price="1000" data-image="/img/Samsung/ss-4-1.webp">Add to Cart</a>
@@ -235,7 +234,7 @@
                     <!-- AR24TSEAFWK AC with Digital Inverter -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center reetech"
                         data-id="Samsung11" data-title="AR24TSEAFWK Digital Inverter"
-                        data-des="30,000 BTU Stay comfortably cool without feeling cold" data-price="$1050"
+                        data-des="20,000 BTU, Maximum Cooling Portable Air Conditioner" data-price="$1050"
                         data-dimension="720*550*350" data-capacity="30,000 BTU" data-manufacture="SamSung"
                         data-warranty="6 Months">
                         <a href="/productDetail-4.html" class="sib">
@@ -260,7 +259,7 @@
                     <!-- LG PuriCare 360 Dual Filter Air Purifier -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center lg"
                         data-id="LG31" data-title="LG PuriCare 360"
-                        data-des="15,000 BTU LG PuriCare™ 360 with Clean Booster" data-price="$1100"
+                        data-des="30,000 BTU, AR24TSEAFWK Air ft with Digital Inverter" data-price="$1100"
                         data-dimension="550*350*250" data-capacity="15,000 BTU" data-manufacture="LG"
                         data-warranty="12 Months">
                         <a href="/productDetail-7.html" class="sib">
@@ -270,7 +269,7 @@
                             class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
                             <i class="fas fa-heart"></i>
                         </span>
-                        <p class="text-capitalize mt-3 mb-1">LG PuriCare 360</p>
+                        <p class="text-capitalize mt-3 mb-1">LG PuriCare with 360 Degree</p>
                         <span class="fw-bold d-block price"><em>$1499</em> $1100</span>
                         <a href="#" class="btn btn-primary mt-3 add-to-cart mb-4" data-name="LG PuriCare 360"
                             data-price="1100" data-image="/img/LG/lg-3-1.jpg">Add to
@@ -281,7 +280,7 @@
                     <!-- AR24TSHZJWK AC with Digital Inverter -->
                     <div class="selectProduct product-box special-img position-relative overflow-hidden text-center samsung"
                         data-id="Samsung21" data-title="AR24TSHZJWK Digital Inverter"
-                        data-des="22,000 BTU make cool faster, wider & farther" data-price="$1150"
+                        data-des="25,000 BTU, AR24TSHZJWK Air Cor with Digital Inverter" data-price="$1150"
                         data-dimension="650*550*250" data-capacity="22,000 BTU" data-manufacture="SamSung"
                         data-warranty="18 Months">
                         <a href="/productDetail-5.html" class="sib">
@@ -334,12 +333,9 @@
 
                 <!-- HEADER OF PREVIEW INCLUDE <H4> & BUTTON -->
                 <div class="row">
-                    <div class="col-md-10">
-
-                    </div>
-                    <div class="col-md-2 mb-2 mt-2">
+                    <div class="col-md-12 mb-2 mt-2 btn-dis">
                          
-                        <button class="cmprBtn rounded-pill fw-bolder" disabled>Compare</button>
+                        <button class="cmprBtn rounded-pill fw-bolder btn-dis__1" disabled>Compare</button>
                     </div>
                 </div>
 
@@ -383,6 +379,206 @@
     </section>
     <!-- END PRODUCTS CONTENT -->
 
+    <!-- START SWIPER -->
+    <!-- START SECTION 5 - THE TESTIMONIALS -->
+    <section id="testimonials" class="testimonials mt-5 pt-5 mb-5 pb-5">
+        <div class="container">
+            <div class="display-3 text-center">
+                <h1 class="fw-bold text-white">Testimonials</h1>
+                <div class="heading-line"></div>
+                <h3 class="display-3--sub-title">What Our Clients Are Saying</h3>
+            </div>
+
+            <!-- START THE CAROUSEL CONTENT -->
+            <div class="row align-items-center">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <!-- CAROUSEL ITEM 1 -->
+                        <div class="carousel-item active">
+
+                            <!-- TESTIMONIAL CARD -->
+                            <div class="testimonials__card">
+                                <p class="lh-lg">
+                                    <i class="fas fa-quote-left"></i>
+                                    Your time is limited, so don't waste it living someone else's life. Don't be trapped
+                                    by dogma
+                                    <i class="fas fa-quote-right"></i>
+                                <div class="ratings p-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                </p>
+                            </div>
+
+                            <!-- CLIENT PICTURE -->
+                            <div class="testimonials__picture">
+                                <img src="/img/testimonials/client-1.jpg" alt="client-1 picture"
+                                    class="rounded-circle img-fluid">
+                            </div>
+
+                            <!-- CLIENT NAME & ROLE -->
+                            <div class="testimonials__name">
+                                <h3>Patrick Muriung</h3>
+                                <p class="fw-light">Obere Str. 57 - Berlin - Germany</p>
+                            </div>
+                        </div>
+
+                        <!-- CAROUSEL ITEM 2 -->
+                        <div class="carousel-item ">
+
+                            <!-- TESTIMONIAL CARD -->
+                            <div class="testimonials__card">
+                                <p class="lh-lg">
+                                    <i class="fas fa-quote-left"></i>
+                                    If you look at what you have in life, you'll always have more. If you look at what
+                                    you don't have in life, you'll never have enough
+                                    <i class="fas fa-quote-right"></i>
+                                <div class="ratings p-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                </p>
+                            </div>
+
+                            <!-- CLIENT PICTURE -->
+                            <div class="testimonials__picture">
+                                <img src="/img/testimonials/client-2.jpg" alt="client-2 picture"
+                                    class="rounded-circle img-fluid">
+                            </div>
+
+                            <!-- CLIENT NAME & ROLE -->
+                            <div class="testimonials__name">
+                                <h3>Joy Marete</h3>
+                                <p class="fw-light">120 Hanover Sq. - México D.F. - Mexico</p>
+                            </div>
+                        </div>
+
+                        <!-- CAROUSEL ITEM 3 -->
+                        <div class="carousel-item ">
+
+                            <!-- TESTIMONIAL CARD -->
+                            <div class="testimonials__card">
+                                <p class="lh-lg">
+                                    <i class="fas fa-quote-left"></i>
+                                    Do not go where the path may lead, go instead where there is no path and leave a
+                                    trail
+                                    <i class="fas fa-quote-right"></i>
+                                <div class="ratings p-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                </p>
+                            </div>
+
+                            <!-- CLIENT PICTURE -->
+                            <div class="testimonials__picture">
+                                <img src="/img/testimonials/client-3.jpg" alt="client-3 picture"
+                                    class="rounded-circle img-fluid">
+                            </div>
+
+                            <!-- CLIENT NAME & ROLE -->
+                            <div class="testimonials__name">
+                                <h3>ClaireBelle Zawaki</h3>
+                                <p class="fw-light">Berguvsvägen 8 - Luleå - Sweden</p>
+                            </div>
+                        </div>
+
+                        <!-- CAROUSEL ITEM 4 -->
+                        <div class="carousel-item ">
+
+                            <!-- TESTIMONIAL CARD -->
+                            <div class="testimonials__card">
+                                <p class="lh-lg">
+                                    <i class="fas fa-quote-left"></i>
+                                    You have brains in your head. You have feet in your shoes. You can steer yourself
+                                    any direction you choose
+                                    <i class="fas fa-quote-right"></i>
+                                <div class="ratings p-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                </p>
+                            </div>
+
+                            <!-- CLIENT PICTURE -->
+                            <div class="testimonials__picture">
+                                <img src="/img/testimonials/client-4.jpg" alt="client-4 picture"
+                                    class="rounded-circle img-fluid">
+                            </div>
+
+                            <!-- CLIENT NAME & ROLE -->
+                            <div class="testimonials__name">
+                                <h3>Uhuru Kenyatta</h3>
+                                <p class="fw-light">35 King George - London - UK</p>
+                            </div>
+                        </div>
+
+                        <!-- CAROUSEL ITEM 5 -->
+                        <div class="carousel-item ">
+
+                            <!-- TESTIMONIAL CARD -->
+                            <div class="testimonials__card">
+                                <p class="lh-lg">
+                                    <i class="fas fa-quote-left"></i>
+                                    You have brains in your head. You have feet in your shoes. You can steer yourself
+                                    any direction you choose
+                                    <i class="fas fa-quote-right"></i>
+                                <div class="ratings p-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                </p>
+                            </div>
+
+                            <!-- CLIENT PICTURE -->
+                            <div class="testimonials__picture">
+                                <img src="/img/testimonials/client-5.jpg" alt="client-4 picture"
+                                    class="rounded-circle img-fluid">
+                            </div>
+
+                            <!-- CLIENT NAME & ROLE -->
+                            <div class="testimonials__name">
+                                <h3>Uhuru Kenyatta</h3>
+                                <p class="fw-light">Berkeley Gardens 12 Brewery - London - UK</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button"
+                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+
+                        </button>
+                        <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button"
+                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- END THE CAROUSEL CONTENT -->
+        </div>
+    </section>
+    <!-- END SECTION 5 - THE TESTIMONIALS -->
+
+    <!-- END SWIPER -->
+
+
     <!-- newsletter -->
     <section id="newsletter" class="py-5">
         <div class="container">
@@ -391,7 +587,8 @@
                     <h2 class="position-relative d-inline-block ms-4">Newsletter Subscription</h2>
                 </div>
 
-                <p class="text-center text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus rem
+                <p class="text-center text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+                    rem
                     officia accusantium maiores quisquam dolorum?</p>
                 <div class="input-group mb-3 mt-3">
                     <input type="text" class="form-control" placeholder="Enter Your Email ...">
@@ -505,7 +702,8 @@
                     </div>
                     <div class="contact-box__info">
                         <a href="" class="contact-box__info--title">Ho Chi Minh, VN</a>
-                        <p class="contact-box__info--subtitle">590 Cach Mang Thang 8, Ward 11, District III,<br> Ho Chi
+                        <p class="contact-box__info--subtitle">590 Cach Mang Thang 8, Ward 11, District III,<br> Ho
+                            Chi
                             Minh City, Viet Nam</p>
                     </div>
                 </div>
@@ -541,7 +739,8 @@
                         Cosy Air Conditioner, a leading supplier of Air Conditioner technology excels in offering
                         comprehensive
                         and indispensable solutions to meet any business demand. With our expertise in research and
-                        development in the digital signage industry, Cosy prides itself in providing access to the most
+                        development in the digital signage industry, Cosy prides itself in providing access to the
+                        most
                         advanced and progressive technologies for B2B Information Display industry.
                     </p>
                 </div>
@@ -587,7 +786,8 @@
             <div class="row text-center text-white">
                 <div class="col-12">
                     <div class="footer-bottom__copyright">
-                        &COPY; Copyright 2022 <a href="#">Multi-purpose Company</a> | Created by <a href="#">The Cosy
+                        &COPY; Copyright 2022 <a href="#">Multi-purpose Company</a> | Created by <a href="#">The
+                            Cosy
                             Company</a>
                     </div>
                 </div>
@@ -600,7 +800,7 @@
         <i class="fas fa-chevron-up"></i>
     </a>
     <!-- END THE FOOTER -->
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="/assets/js/main.js"></script>
@@ -626,6 +826,7 @@
     </script>
     <script src="/assets/js/responses.js"></script>
     <script src="/assets/js/chat.js"></script>
+
 </body>
 
 </html>

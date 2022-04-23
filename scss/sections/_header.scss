@@ -4,11 +4,23 @@
   @include gradient;
 }
 
+// .navcart {
+//   @include media-breakpoint-down(lg) {
+//     padding-right: 50px;
+//   }
+// }
+
 //SEARCH BAR
 .navbarNav {
   display: flex;
   flex-direction: row;
   position: relative;
+}
+
+.searchbar {
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
 }
 
 .searchbar form {
@@ -83,6 +95,12 @@
   outline: none;
 }
 
+.searchbar-2 {
+  @include media-breakpoint-down(lg) {
+    display: block;
+  }
+}
+
 //NAVBAR
 .navbar-nav {
   li {
@@ -118,6 +136,7 @@
     }
   }
 }
+
 .nav-icons {
   position: relative;
   i {
@@ -137,6 +156,11 @@
     }
     @include media-breakpoint-down(lg) {
       display: no;
+    }
+  }
+
+  .nav-cart {
+    @include media-breakpoint-down(lg) {
     }
   }
 }

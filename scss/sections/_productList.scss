@@ -1640,6 +1640,35 @@ input[type='radio'].w3-radio:disabled + .w3-validate {
   color: #000 !important;
   background-color: #fff !important;
 }
+
+.w3-white {
+  a {
+    img {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.comparePan-text-1 {
+  @include media-breakpoint-down(lg) {
+    font-size: 0.85rem;
+    text-align: start;
+  }
+}
+
+.btn-dis {
+  @include media-breakpoint-down(lg) {
+    margin: 20px;
+  }
+  &__1 {
+    @include media-breakpoint-down(lg) {
+      margin: 15px;
+    }
+  }
+}
+
 .w3-black,
 .w3-hover-black:hover {
   color: #fff !important;
@@ -2197,7 +2226,26 @@ a {
 }
 .compHeader {
   min-height: 200px;
+  @include media-breakpoint-down(lg) {
+    display: none;
+
+    img {
+    }
+  }
 }
+
+.compHeader-2 {
+  @include media-breakpoint-down(sm) {
+    padding: 16px !important;
+  }
+}
+
+.hero-event {
+  @include media-breakpoint-down(md) {
+    padding: 14px !important;
+  }
+}
+
 .compareThumb {
   height: 150px;
 }

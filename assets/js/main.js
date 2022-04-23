@@ -38,11 +38,11 @@
             srcPro +
             '"><img src="' +
             image +
-            '" alt="image" style="height:100px;"/></a><p id="' +
+            '" alt="image" style="height:100px;"/></a><p class="comparePan-text-1" id="' +
             productID +
             '">' +
             displayDes +
-            '</p><p id="' +
+            '</p><p class="comparePan-text-2" id="' +
             productID +
             '"class="fw-bold" >' +
             displayPrice +
@@ -100,13 +100,13 @@
           '<div class="w3-col s3 m3 l3 pb-5 mb-5">' +
           '<ul class="product">' +
           '<li class=" compHeader"></li>' +
-          '<li>Product</li>' +
+          '<li class="compHeader-2">Product</li>' +
           '<li>Dimension</li>' +
           '<li>Capacity</li>' +
-          "<li>Manufacture's Brand</li>" +
+          '<li>Manufacture</li>' +
           '<li>Warranty</li>' +
           '<li>Price</li>' +
-          '<li class="text-secondary fw-bolder" style="padding:17px 0px;">The #HERO Event<i class="fa-solid fa-gift p-1"></i></li>' +
+          '<li class="hero-event text-secondary fw-bolder" style="padding:17px 0px;">#HERO Event<i class="fa-solid fa-gift p-1"></i></li>' +
           '</ul>' +
           '</div>'
       );

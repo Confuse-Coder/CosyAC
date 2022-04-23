@@ -13,7 +13,7 @@ data = [
     pic: 'Samsung/ss-2-2.png',
     price: 850,
     src: '/productDetail-2.html',
-    des: '22,000 BTU,WindFree™ Cooling AR9500T Air Conditioner MDS',
+    des: '22,000 BTU, WindFree™ Cooling AR9500T Air Conditioner',
   },
   {
     id: 'LG21',
@@ -21,7 +21,7 @@ data = [
     pic: 'Samsung/ss-1-1.webp',
     price: 900,
     src: '/productDetail-3.html',
-    des: '22,00BTU, AI Auto Cooling AR9500T AC with Fast Cooling',
+    des: '22,00BTU, AI Auto Cooling AR95000T  with Fast Cooling',
   },
   {
     id: 'Reetech13',
@@ -37,7 +37,7 @@ data = [
     pic: 'Samsung/ss-2-3.png',
     price: 1000,
     src: '/productDetail-6.html',
-    des: '15,000 BTU, AR9500T AC with AI Auto Cooling',
+    des: '15,000 BTU, ART9500T Air Conditioner AI Auto Cooling',
   },
   {
     id: 'Samsung11',
@@ -53,7 +53,7 @@ data = [
     pic: 'LG/lg-3-1.jpg',
     price: 1100,
     src: '/productDetail-4.html',
-    des: '30,000 BTU, AR24TSEAFWK AC with Digital Inverter',
+    des: '30,000 BTU, AR24TSEAFWK Air ft with Digital Inverter',
   },
   {
     id: 'Samsung21',
@@ -61,7 +61,7 @@ data = [
     pic: 'Samsung/ss-2-4.webp',
     price: 1150,
     src: '/productDetail-5.html',
-    des: '25,000 BTU, AR24TSHZJWK AC with Digital Inverter',
+    des: '25,000 BTU, AR24TSHZJWK Air Cor with Digital Inverter',
   },
 ];
 
