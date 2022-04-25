@@ -47,7 +47,7 @@ function getTime() {
 
 // Khởi tạo tin nhắn đầu tiên của Bot
 function firstBotMessage() {
-  let firstMessage = "How's it going?";
+  let firstMessage = 'What are you looking for?';
   document.getElementById('botStarterMessage').innerHTML =
     '<p class="botText"><span>' + firstMessage + '</span></p>';
 
