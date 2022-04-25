@@ -342,7 +342,7 @@ function displayCart() {
   <th>Price</th>
   <th>Quantity</th>
 </tr>`;
-  let sum = 0;
+
   for (var i = 0; i < cartArray.length; i++) {
     output += `<tr>
                   <td>${cartArray[i].name}</td>

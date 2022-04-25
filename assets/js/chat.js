@@ -45,7 +45,7 @@ function getTime() {
   return time;
 }
 
-// Gets the first message
+// Khởi tạo tin nhắn đầu tiên của Bot
 function firstBotMessage() {
   let firstMessage = "How's it going?";
   document.getElementById('botStarterMessage').innerHTML =
@@ -59,7 +59,7 @@ function firstBotMessage() {
 
 firstBotMessage();
 
-// Retrieves the response
+// Đoạn message Bot trả về
 function getHardResponse(userText) {
   let botResponse = getBotResponse(userText);
   let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
@@ -68,7 +68,7 @@ function getHardResponse(userText) {
   document.getElementById('chat-bar-bottom').scrollIntoView(true);
 }
 
-//Gets the text text from the input box and processes it
+//Lấy value từ input khi User nhập giá trị
 function getResponse() {
   let userText = $('#textInput').val();
 
@@ -87,18 +87,13 @@ function getResponse() {
   }, 1000);
 }
 
-// Handles sending text via button clicks
+// Click Enter đẻ gửi message
 function buttonSendText(sampleText) {
   let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
 
   $('#textInput').val('');
   $('#chatbox').append(userHtml);
   document.getElementById('chat-bar-bottom').scrollIntoView(true);
-
-  //Uncomment this if you want the bot to respond to this buttonSendText event
-  // setTimeout(() => {
-  //     getHardResponse(sampleText);
-  // }, 1000)
 }
 
 function sendButton() {
@@ -109,7 +104,7 @@ function heartButton() {
   buttonSendText('<i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"></i>');
 }
 
-// Press enter to send a message
+// Nhấn Enter để gủi message
 $('#textInput').keypress(function (e) {
   if (e.which == 13) {
     getResponse();

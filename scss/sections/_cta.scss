@@ -155,3 +155,25 @@ iframe {
 .form-check {
   margin-bottom: 1.5rem;
 }
+
+//OUR LEADERS
+
+.leader-title {
+  &__box {
+    padding-top: 1rem;
+    border-top: 0.1rem solid $gray-400;
+  }
+}
+
+.leader-box {
+  padding: 40px;
+  border: 0.1rem solid $gray-400;
+
+  .card-title-1 {
+    font-size: 20px;
+  }
+}
+
+.select-box {
+  border: 0.1rem solid $gray-400;
+}

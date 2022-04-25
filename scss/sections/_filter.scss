@@ -1,3 +1,6 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
 .list-group {
   justify-content: center;
   display: none;
@@ -177,4 +180,19 @@
     border-top: 3px solid white;
     border-radius: 0px;
   }
+}
+
+//SCROLLBAR
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right bottom, $primary, $primary);
+  border-radius: 100rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: $gray-200;
+  border-radius: 100rem;
 }
