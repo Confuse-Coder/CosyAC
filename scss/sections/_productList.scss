@@ -1062,11 +1062,20 @@ input[type='radio'].w3-radio:disabled + .w3-validate {
   text-align: center;
   width: 0.6em;
 }
+
+#warningModalClose {
+  font-size: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  width: 100%;
+}
+
 .w3-left-align {
   text-align: left !important;
 }
 .w3-right-align {
-  text-align: right !important;
+  background-color: #e55957 !important;
+  text-align: center !important;
 }
 .w3-justify {
   text-align: justify !important;
@@ -1627,9 +1636,23 @@ input[type='radio'].w3-radio:disabled + .w3-validate {
 }
 .w3-teal,
 .w3-hover-teal:hover {
+  text-align: center;
+  height: 80px;
   color: #fff !important;
-  background-color: #009688 !important;
+  i {
+    font-size: 4rem;
+    color: #e55957;
+  }
 }
+
+.w3-teal-2 {
+  height: 100px;
+
+  h4 {
+    color: $gray-600;
+  }
+}
+
 .w3-yellow,
 .w3-hover-yellow:hover {
   color: #000 !important;
@@ -1656,6 +1679,22 @@ input[type='radio'].w3-radio:disabled + .w3-validate {
     font-size: 0.85rem;
     text-align: start;
   }
+}
+
+.rounded-pill-3 {
+  border: 0.1rem solid $gray-500;
+  &:enabled {
+    background-color: $white;
+    border: 0.1rem solid $primary;
+    font-weight: 300;
+    color: $primary;
+    transition: 1s ease;
+  }
+}
+
+.btn-dis {
+  text-align: right;
+  padding-right: 1.25rem;
 }
 
 .btn-dis {
@@ -2088,6 +2127,8 @@ input[type='radio'].w3-radio:disabled + .w3-validate {
 }
 
 .warningModal {
+  border-radius: 8px;
+  overflow: hidden;
   position: absolute;
   width: auto !important;
   top: 50%;
@@ -2179,6 +2220,7 @@ body {
   height: 100%;
   overflow: auto;
   text-decoration: none;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 a {
   text-decoration: none;

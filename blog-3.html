@@ -49,7 +49,7 @@
                     <span class="nav-icons">
                         <!-- START SEARCH BAR -->
                         <div class="searchbar">
-                            <form id="formSearch">
+                            <form id="formSearch" autocomplete="off">
                                 <input type="text" class="form-control mb-5 p-3" placeholder="Searching..." id="search"
                                     name="search" />
                                 <i class="fas fa-magnifying-glass" id="search-icon"></i>
@@ -218,14 +218,17 @@
         <div class="row">
             <div class="col-md-12 p-0 m-0">
                 <div class="portfolio-box h-75 p-0 m-0 shadow lg">
-                    <img src="/img/LG/lg-3-1.jpg" alt="related image 1" title="related image 1" class="img-fluid h-100">
+                    <img src="/img/LG/lg-3-1.jpg" alt="related image 1" title="related image 1"
+                        class="img-fluid h-100 p-5">
                     <div class="portfolio-info">
                         <div class="caption">
-                            <button type="button" class="rounded-pill btn-rounded">show now
-                                <span>
-                                    <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </button>
+                            <a href="/productDetail-7.html">
+                                <button type="button" class="rounded-pill btn-rounded">show now
+                                    <span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -233,6 +236,25 @@
         </div>
     </div>
     <!-- END RELATED PRODUCTS -->
+
+    <!-- newsletter -->
+    <section id="newsletter" class="py-5">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="title text-center pt-3 pb-5">
+                    <h2 class="position-relative d-inline-block ms-4">Newsletter Subscription</h2>
+                </div>
+
+                <p class="text-center text-muted">Subscribe to our newsletter to receive E-mails on latest updates
+                    on Cosy Electro-Mechanics and other helpful information.</p>
+                <div class="input-group mb-3 mt-3">
+                    <input type="text" class="form-control" placeholder="Enter Your Email ...">
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of newsletter -->
 
     <!-- START BREADCRUMB -->
     <div class="row mt-4">
