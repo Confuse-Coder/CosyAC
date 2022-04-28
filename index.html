@@ -15,6 +15,9 @@
         function submit() {
             alert("Thank you for your message \n We will contact you shortly");
         }
+        function mySubmit1() {
+            alert("Subscribe Successful! \nWe will contact you shortly");
+        }
     </script>
 </head>
 
@@ -664,10 +667,11 @@
 
                 <p class="text-center text-muted">Subscribe to our newsletter to receive E-mails on latest updates
                     on Cosy Electro-Mechanics and other helpful information.</p>
-                <div class="input-group mb-3 mt-3">
-                    <input type="text" class="form-control" placeholder="Enter Your Email ...">
+                <form onsubmit="mySubmit1()" class="input-group mb-3 mt-3">
+                    <input type="email" pattern="\w+@\w{3,6}\.[a-z]{3,4}$" class="form-control"
+                        placeholder="Enter Your Email: yourEmail@gmail.com">
                     <button class="btn btn-primary" type="submit">Subscribe</button>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -756,7 +760,8 @@
                         </svg>
                     </div>
                     <div class="contact-box__info">
-                        <a href="mailto:example@foo.com?subject=hello world" class="contact-box__info--title">Email
+                        <a href="mailto:sales@company.com?subject=Offer Inquiry&cc=support@company.com&bcc=info@company.com&body=Hi I would like to learn about the offer..."
+                            class="contact-box__info--title">Email
                             Us</a>
                         <p class="contact-box__info--subtitle">Offline Support</p>
                     </div>
