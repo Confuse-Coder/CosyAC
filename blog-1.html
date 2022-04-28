@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <script>
+        function mySubmit1() {
+            alert("Subscribe Successful! \nWe will contact you shortly");
+        }
+    </script>
 
 </head>
 
@@ -297,10 +302,11 @@
 
                 <p class="text-center text-muted">Subscribe to our newsletter to receive E-mails on latest updates
                     on Cosy Electro-Mechanics and other helpful information.</p>
-                <div class="input-group mb-3 mt-3">
-                    <input type="text" class="form-control" placeholder="Enter Your Email ...">
+                <form onsubmit="mySubmit1()" class="input-group mb-3 mt-3">
+                    <input type="email" pattern="\w+@\w{3,6}\.[a-z]{3,4}$" class="form-control"
+                        placeholder="Enter Your Email: yourEmail@gmail.com">
                     <button class="btn btn-primary" type="submit">Subscribe</button>
-                </div>
+                </form>
             </div>
         </div>
     </section>
