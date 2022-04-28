@@ -12,8 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <script>
-        function submit() {
-            alert("Thank you for your message \n We will contact you shortly");
+        function mySubmit() {
+            var yname = document.getElementById('inputFirstName').value;
+            alert("Thank you " + yname + "\nWe will contact you shortly");
+        }
+        function mySubmit1() {
+            alert("Subscribe Successful! \nWe will contact you shortly");
         }
     </script>
 </head>
@@ -121,32 +125,33 @@
                 <div class="col-12 col-lg-6 bg-white shadow p-3">
                     <div class="form w-100 pb-2">
                         <h4 class="display-3--title mb-5">send us a message</h4>
-                        <form class="row">
+                        <form action="#" class="row" onsubmit="mySubmit()">
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <input type="text" placeholder="First Name" id="inputFirstName"
-                                    class=" shadow form-control-lg form-control">
+                                    class=" shadow form-control-lg form-control" required>
                             </div>
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <input type="text" placeholder="Last Name" id="inputLastName"
-                                    class=" shadow form-control-lg form-control">
+                                    class=" shadow form-control-lg form-control" required>
                             </div>
                             <div class="col-lg-12 mb-3">
-                                <input type="text" placeholder="Email Address" id="inputEmail"
-                                    class=" shadow form-control-lg form-control">
+                                <input type="email" pattern="\w+@\w{3,5}\.[a-z]{3,4}$"
+                                    placeholder="E.g: yourEmail@gmail.com" id="inputEmail"
+                                    class=" shadow form-control-lg form-control" required>
                             </div>
                             <div class="mb-3">
                                 <textarea name="message" placeholder="Message" id="message" rows="8"
-                                    class=" shadow form-control-lg form-control"></textarea>
+                                    class=" shadow form-control-lg form-control" required></textarea>
+                            </div>
+                            <div class="text-center d-grid mt-1">
+                                <input type="submit"
+                                    class="bg-primary btn btn-primary rounded-pill pt-3 pb-3 text-white">
+                                Submit
+                                <i class="fas fa-paper-plane"></i>
+                                </input>
                             </div>
                         </form>
 
-                        <div class="text-center d-grid mt-1">
-                            <button onclick="submit()" type="submit"
-                                class="bg-primary btn btn-primary rounded-pill pt-3 pb-3 text-white">
-                                Submit
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -164,10 +169,11 @@
 
                 <p class="text-center text-muted">Subscribe to our newsletter to receive E-mails on latest updates
                     on Cosy Electro-Mechanics and other helpful information.</p>
-                <div class="input-group mb-3 mt-3">
-                    <input type="text" class="form-control" placeholder="Enter Your Email ...">
+                <form onsubmit="mySubmit1()" class="input-group mb-3 mt-3">
+                    <input type="email" pattern="\w+@\w{3,6}\.[a-z]{3,4}$" class="form-control"
+                        placeholder="Enter Your Email: yourEmail@gmail.com">
                     <button class="btn btn-primary" type="submit">Subscribe</button>
-                </div>
+                </form>
             </div>
         </div>
     </section>
